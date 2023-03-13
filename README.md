@@ -10,7 +10,7 @@
 | child_name_kana    | string  | null: false               |
 | parent_name        | string  | null: false               |
 | parent_name_kana   | string  | null: false               |
-| sex                | string  | null: false               |
+| sex_id             | integer | null: false               |
 | birthday           | date    | null: false               |
 
 ### Association
