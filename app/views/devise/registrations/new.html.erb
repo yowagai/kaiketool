@@ -4,25 +4,55 @@
   <%= render 'shared/error_messages', model: f.object %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :アドレス %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :パスワード %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <%# <em>(<%= @minimum_password_length characters minimum)</em> %>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :もう一度 %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :お子さんのなまえ %><br />
+    <%= f.email_field :child_name, autofocus: true, autocomplete: "" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ふりがな %><br />
+    <%= f.email_field :child_name_kana, autofocus: true, autocomplete: "" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :お父さん・お母さんのなまえ %><br />
+    <%= f.email_field :parent_name, autofocus: true, autocomplete: "" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ふりがな %><br />
+    <%= f.email_field :parent_name_kana, autofocus: true, autocomplete: "" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :性別 %><br />
+    <%= f.email_field :sex_id, autofocus: true, autocomplete: "" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :誕生日 %><br />
+    <%= f.email_field :birthday, autofocus: true, autocomplete: "" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "とうろく" %>
   </div>
 <% end %>
 
