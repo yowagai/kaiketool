@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= f.label :性別 %><br />
-    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:""}) %>
+    <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"user-sex"}) %>
   </div>
 
   <div class="field">
