@@ -1,24 +1,74 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| child_name         | string  | null: false               |
+| child_name_kana    | string  | null: false               |
+| parent_name        | string  | null: false               |
+| parent_name_kana   | string  | null: false               |
+| sex                | string  | null: false               |
+| birthday           | date    | null: false               |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :search_histories
+- has_many :comments
+- has_many :stamps
+- has_many :favorites
 
-* Configuration
+## search_histories テーブル
 
-* Database creation
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| user               | references | null: false, foreign_key: true |
+| title              | string     | null: false                    |
+| background         | text       |                                |
+| type_id            | integer    |                                |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_many :comments
+- has_many :stamps
+- has_many :favorites
 
-* Services (job queues, cache servers, search engines, etc.)
+## comments テーブル
 
-* Deployment instructions
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| user               | references | null: false, foreign_key: true |
+| search_histories   | references | null: false, foreign_key: true |
+| content            | text       |                                |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :search_histories
+
+## stamps テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| user               | references | null: false, foreign_key: true |
+| search_histories   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :search_histories
+
+## favorites テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| user               | references | null: false, foreign_key: true |
+| search_histories   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :search_histories
