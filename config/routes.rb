@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'kaiketools#index'
   resources :kaiketools
   get "speech-to-text", to: "speech_to_text#index"
+  get '/google_custom_search', to: 'google_custom_search#search'
 end

@@ -25,6 +25,5 @@ class SpeechToTextController < ApplicationController
       alternatives = result.alternatives
       @transcriptions += "#{alternatives.first.transcript}"
     end
-    # [END speech_transcribe_async_gcs]
   end
 end
