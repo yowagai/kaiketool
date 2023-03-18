@@ -16,25 +16,23 @@ class GoogleCustomSearchController < ApplicationController
 
     # Custom Search APIの検索パラメータを設定します
     search_params = {
-      q: 'キーワード', # 検索クエリ
+      q: params[:q], # 検索クエリ
       cx: ENV['GOOGLE_CX'], # カスタム検索エンジンID
-      num: 10, # 1回のAPIリクエストで返される検索結果の数
+      num: 3, # 1回のAPIリクエストで返される検索結果の数
       start: 1, # 検索結果の開始位置
       search_type: 'image', # 検索タイプ
       img_size: 'medium', # 画像サイズのフィルター
-      img_type: 'clipart', # 画像の種類のフィルター
-      img_color_type: 'color', # 画像の色のフィルター
+      # img_type: 'clipart', # 画像の種類のフィルター
+      # img_color_type: 'color', # 画像の色のフィルター
       cr: 'countryJP', # 検索範囲の指定
       safe: 'active', # セーフサーチの有効化
       gl: 'jp', # 地域の指
       googlehost: 'google.co.jp', # 検索するGoogleドメイン
-      filter: 1, # フィルターの有効化
-      fields: 'items(link)', # 取得するフィールド
+      # filter: 1, # フィルターの有効化
+      # fields: 'items(link)', # 取得するフィールド
     }
-
     # ランダムな値をパラメータに追加します
     search_params[:exact_terms] = random_value
-
     # Custom Search APIを呼び出して検索結果を取得します
     search_result = client.list_cses(search_params)
     # 検索結果から画像を抽出して、@images変数に格納します
