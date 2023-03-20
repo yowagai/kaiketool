@@ -1,0 +1,14 @@
+<h1>Search Images</h1>
+
+<%= form_tag(search_google_custom_search_index_path, method: :get) do %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if @image_urls.present? %>
+  <ul>
+    <% @image_urls.each do |url| %>
+      <li><%= image_tag url %></li>
+    <% end %>
+  </ul>
+<% end %>

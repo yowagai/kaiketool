@@ -1,5 +1,9 @@
 class SpeechToTextController < ApplicationController
   def index
+
+  end
+  
+  def search
     require "google/cloud/speech"
     speech = Google::Cloud::Speech.speech
 
