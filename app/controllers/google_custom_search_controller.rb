@@ -6,6 +6,7 @@ class GoogleCustomSearchController < ApplicationController
   end
 
   def search
+    @title = params[:q]
     # Google Custom Search APIを呼び出すコードをここに書きます
     # 検索結果から画像を取得し、ビューで表示するために
     # @images インスタンス変数に結果を格納します
