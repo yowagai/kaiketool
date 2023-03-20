@@ -16,24 +16,10 @@
   <% else %>
     <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
     <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-    <li><%= link_to "音声出力", speech_to_text_path%></li>
+    <li><%= link_to "kaiketoolへ", speech_to_text_index_path%></li>
+    <li><%= link_to "みんなの投稿", ''%></li>
   <% end %>
 </ul>
-
-<h1>Search Images</h1>
-
-<%= form_tag(google_custom_search_path, method: :get) do %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-<% if @image_urls.present? %>
-  <ul>
-    <% @image_urls.each do |url| %>
-      <li><%= image_tag url %></li>
-    <% end %>
-  </ul>
-<% end %>
       <!--/container-->
     </div>
   </main>

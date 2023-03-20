@@ -1,5 +1,9 @@
 class SpeechToTextController < ApplicationController
   def index
+
+  end
+
+  def search
     require "google/cloud/speech"
     speech = Google::Cloud::Speech.speech
 
@@ -20,7 +24,7 @@ class SpeechToTextController < ApplicationController
 
     results = operation.response.results
 
-    @transcriptions = "Transcription: "
+    @transcriptions = ""
     results.each do |result|
       alternatives = result.alternatives
       @transcriptions += "#{alternatives.first.transcript}"
