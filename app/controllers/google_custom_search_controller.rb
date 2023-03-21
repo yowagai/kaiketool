@@ -6,6 +6,13 @@ class GoogleCustomSearchController < ApplicationController
   end
 
   def search
+    google_custom_search
+    # redirect_to "kaiketools/new"
+  end
+
+  private
+
+  def google_custom_search
     @title = params[:q]
     # Google Custom Search APIを呼び出すコードをここに書きます
     # 検索結果から画像を取得し、ビューで表示するために
@@ -43,6 +50,7 @@ class GoogleCustomSearchController < ApplicationController
       @image_urls = []
     end
     # @image_urls = search_result.items.map { |item| item.link }
-    render "google_custom_search/index"
+    render "kaiketools/new"
   end
+
 end
