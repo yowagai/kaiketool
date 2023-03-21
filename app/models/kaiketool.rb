@@ -1,0 +1,2 @@
+class Kaiketool < ApplicationRecord
+end

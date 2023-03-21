@@ -26,7 +26,7 @@ class GoogleCustomSearchController < ApplicationController
     search_params = {
       q: params[:q], # 検索クエリ
       cx: ENV['GOOGLE_CX'], # カスタム検索エンジンID
-      num: 1, # 1回のAPIリクエストで返される検索結果の数
+      num: 3, # 1回のAPIリクエストで返される検索結果の数
       start: 1, # 検索結果の開始位置
       search_type: 'image', # 検索タイプ
       img_size: 'medium', # 画像サイズのフィルター
