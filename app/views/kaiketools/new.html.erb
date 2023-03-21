@@ -1,14 +1,8 @@
-<h1>なぜなぜ検索</h1>
-
-<%= form_tag(search_google_custom_search_index_path, method: :get) do %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
 
 <% if @title.present? && @image_urls.present? %>
   <% @image_urls.each do |url|  %>
 
-    <%= form_with model: @kaiketool, local: true do |f|%>
+    <%= form_with model: Kaiketool.new, local: true, url: kaiketools_path, method: :post do |f|%>
       <div class="">
         <%= f.label :title, "なぜなぜキーワード" %><br />
         <%= f.text_field :title, value: @title, id:"prototype_concept" %>
@@ -17,20 +11,20 @@
 
       <div class="">
         <%= f.label :image, "なぜなぜ画像" %><br />
-        <%= f.file_field :image, value: url %> 
+        <%= f.text_field :image, value: url %> 
         <!-- valueオプションを使って、urlをフォームに表示する -->
       </div>
 
       <%= image_tag url %>
 
       <div class="">
-        <%= f.label :catch_copy, "なぜなぜの背景" %><br />
-        <%= f.text_area :catch_copy, id:"prototype_concept" %>
+        <%= f.label :background, "なぜなぜの背景" %><br />
+        <%= f.text_area :background, id:"prototype_concept" %>
       </div>
 
       <div class="">
-        <%= f.label :concept, "なぜなぜの種類" %><br />
-        <%= f.text_area :concept, class: :form__text, id:"prototype_concept" %>
+        <%= f.label :type_id, "なぜなぜの種類" %><br />
+        <%= f.text_area :type_id, class: :form__text, id:"prototype_concept" %>
       </div>
 
 

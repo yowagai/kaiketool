@@ -3,6 +3,7 @@ class KaiketoolsController < ApplicationController
   end
 
   def new
+    # @title = params[:q]
     @kaiketool = Kaiketool.new
   end
 
@@ -22,6 +23,6 @@ class KaiketoolsController < ApplicationController
   private
 
   def kaiketool_params
-    params.require(:prototype).permit(:title, :catch_copy, :concept, :image).merge(user_id: current_user.id)
+    params.require(:kaiketool).permit(:title, :background, :type_id, :image).merge(user_id: current_user.id)
   end
 end

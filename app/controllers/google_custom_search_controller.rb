@@ -6,6 +6,13 @@ class GoogleCustomSearchController < ApplicationController
   end
 
   def search
+    google_custom_search
+    # redirect_to "kaiketools/new"
+  end
+
+  private
+
+  def google_custom_search
     @title = params[:q]
     # Google Custom Search APIを呼び出すコードをここに書きます
     # 検索結果から画像を取得し、ビューで表示するために
@@ -19,7 +26,7 @@ class GoogleCustomSearchController < ApplicationController
     search_params = {
       q: params[:q], # 検索クエリ
       cx: ENV['GOOGLE_CX'], # カスタム検索エンジンID
-      num: 3, # 1回のAPIリクエストで返される検索結果の数
+      num: 1, # 1回のAPIリクエストで返される検索結果の数
       start: 1, # 検索結果の開始位置
       search_type: 'image', # 検索タイプ
       img_size: 'medium', # 画像サイズのフィルター
@@ -43,6 +50,7 @@ class GoogleCustomSearchController < ApplicationController
       @image_urls = []
     end
     # @image_urls = search_result.items.map { |item| item.link }
-    render "google_custom_search/index"
+    render "kaiketools/new"
   end
+
 end
