@@ -6,6 +6,11 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  resources :search_histories do
+    collection do
+      get 'search'
+    end
+  end
   resources :speech_to_text, only: :index do
     collection do
       get 'search'

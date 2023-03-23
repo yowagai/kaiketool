@@ -6,5 +6,5 @@ class Type < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :kaiketools
+  has_many :search_histories
 end
