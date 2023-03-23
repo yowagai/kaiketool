@@ -29,9 +29,13 @@
       </div>
 
       <div class="">
+      <div class="field">
         <%= f.label :type_id, "なぜなぜの種類" %><br />
-        <%= f.text_area :type_id, class: :form__text, id:"prototype_concept" %>
+        <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select-box", id:"kaiketool-type"}) %>
       </div>
+        <%# <%= f.label :type_id, "なぜなぜの種類"<br /> %>
+        <%# <%= f.text_area :type_id, class: :form__text, id:"prototype_concept" %>
+      <%# </div> %>
 
 
       <div class="actions">
@@ -40,3 +44,10 @@
     <% end  %>
   <% end %>
 <% end %>
+
+ <%= form_with model: @kaiketool, local: true, url: kaiketools_path, method: :post do |f|%>
+         <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select-box", id:"kaiketool-type"}) %>
+
+         <%= f.submit "保存する", class: :form__btn  %>
+
+ <% end %>
