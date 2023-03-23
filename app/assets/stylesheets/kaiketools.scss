@@ -24,14 +24,14 @@
 
 /* Loading アイコンの大きさ設定　*/
 #splash_logo img {
-  width:260px;
+  width:400px;
 }
 
 /* fadeUpをするアイコンの動き */
 
 .fadeUp{
 animation-name: fadeUpAnime;
-animation-duration:0.5s;
+animation-duration:0.8s;
 animation-fill-mode:forwards;
 opacity: 0;
 }

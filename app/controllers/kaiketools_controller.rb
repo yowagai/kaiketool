@@ -1,13 +1,9 @@
-require 'google/apis/customsearch_v1'
-require 'googleauth'
-require 'googleauth/stores/file_token_store'
-
 class KaiketoolsController < ApplicationController
   def index
   end
 
   def new
-    # @kaiketool = Kaiketool.new
+    @kaiketool = Kaiketool.new
   end
 
   def create
