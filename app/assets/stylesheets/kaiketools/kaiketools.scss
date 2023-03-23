@@ -77,17 +77,6 @@ opacity: 0;
   z-index:999;
 }
 
-/*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list{
-    /*ナビの数が増えた場合縦スクロール*/
-    position: fixed;
-    z-index: 999; 
-    width: 100%;
-    height: 100vh;/*表示する高さ*/
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
 /*ナビゲーション*/
 #g-nav ul {
     display: none;/*はじめは非表示*/
@@ -126,8 +115,8 @@ opacity: 0;
   top:10px;
   right: 10px;
   cursor: pointer;
-    width: 50px;
-    height:50px;
+    width: 40px;
+    height:40px;
 }
   
 /*×に変化*/  
@@ -170,4 +159,70 @@ opacity: 0;
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
+}
+
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクの形状*/
+#page-top a{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background:#942D2F;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase; 
+  text-decoration: none;
+  font-size:0.6rem;
+  transition:all 0.3s;
+}
+
+#page-top a:hover{
+  background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom:20px;
+  z-index: 2;
+    /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/* 上に上がる動き */
+
+#page-top.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* 下に下がる動き */
+
+#page-top.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+  transform: translateY(100px);
+  }
 }

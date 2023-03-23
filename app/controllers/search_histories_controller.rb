@@ -1,3 +1,7 @@
+require 'google/apis/customsearch_v1'
+require 'googleauth'
+require 'googleauth/stores/file_token_store'
+
 class SearchHistoriesController < ApplicationController
   def index
     @search_history = SearchHistory.includes(:user).order('created_at DESC')
