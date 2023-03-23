@@ -22,4 +22,5 @@ class User < ApplicationRecord
   validates :sex_id, presence: true, numericality: { other_than: 1, message: 'を選択して下さい' }
   validates :birthday, presence: true
 
+  has_many :search_histories
 end

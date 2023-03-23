@@ -1,0 +1,19 @@
+<h1>完了</h1>
+
+<% @search_history.each do |history| %>
+      <h3 class='item-name'>
+        <%= history.title %>
+      </h3>
+    <div class='item-img-content'>
+      <%= image_tag (history.image), class: "item-img" %>
+    </div>
+      <div class=''>
+        <span><%= history.background %><br>
+              <%= history.type.name %></span>
+      </div>
+<% end %>
+
+<%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>検索に戻る</span>
+    <%= image_tag 'search.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+  <% end %>
