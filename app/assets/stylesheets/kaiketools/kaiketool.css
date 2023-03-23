@@ -1,0 +1,19 @@
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+  width:100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a{
+  color: #333;
+}
+
+a:hover{
+   text-decoration: none;   
+}

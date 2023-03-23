@@ -1,11 +1,23 @@
 <body>
-
   <div id="splash">
     <div id="splash_logo">
       <%= image_tag "rwnl1.png", class:"fadeUp" %>
-      <%# <img src="image/rwnl1.png" alt="" class="fadeUp"> %>
     </div>
   </div>
+
+  <div class="openbtn1">
+    <span></span><span></span><span></span>
+  </div>
+  <nav id="g-nav">
+    <ul>
+      <li><a href="#">Top</a></li>  
+      <li><a href="#">About</a></li>  
+      <li><a href="#">Service</a></li>  
+      <li><a href="#">Contact</a></li>  
+    </ul>
+  </nav>
+
+  <p id="page-top"><a href="#">Page Top</a></p>
 
   <main>
     <div id="container">
@@ -27,6 +39,7 @@
   </main>
  
   <%= javascript_pack_tag 'first' %>">
+  <%= javascript_pack_tag 'bokashi' %>">
 </body>
 
 
