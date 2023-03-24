@@ -30,6 +30,9 @@ small{
 
 section{
   padding:250px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 section:nth-child(2n){

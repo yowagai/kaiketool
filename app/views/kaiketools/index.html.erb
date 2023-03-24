@@ -38,9 +38,24 @@
   <div id="container">
   <main id="main">
     <section>
+    <div>
+      <ul class="slider">
+        <li class="slider-item slider-item01">
+          <%= image_tag "utyu.png", rel:"preload", as:"image", id:"background-images", size: '540x270'%>
+        </li>
+        <li class="slider-item slider-item02">
+          <%# <%= image_tag "utyuu-illust2.png", rel:"preload", as:"image", id:"background-images", size: '540x270' %>
+        </li>
+        <li class="slider-item slider-item03">
+          <%# <%= image_tag "utyuu-illust2.png", rel:"preload", as:"image", id:"background-images", size: '540x270' %>
+        </li>
+      </ul>
+    </div>
+    <div>
       <h2>
       <%= link_to "かいけつしてみる？", speech_to_text_index_path %>
       </h2>
+    </div>
     <!--/area1--></section>
       <section>
       <h2>
@@ -67,6 +82,7 @@
   <%= javascript_pack_tag 'first' %>
   <%= javascript_pack_tag 'bokashi' %>
   <%= javascript_pack_tag 'link' %>
+  <%= javascript_pack_tag 'slider' %>
 </body>
 
 
