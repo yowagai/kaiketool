@@ -5,42 +5,73 @@
       <%= image_tag "kaiketu2.png", class:"fadeUp" %>
     </div>
   </div>
+<header>
+
+<body>
   <div class="kaiketu">
     <div class="kaiketu-btn">
         <%= button_to "かいけつしてみる？", speech_to_text_index_path, method: :get, class: "btn-link" %>
     </div>
   </div>
-<header>
-
-<body>
-  <main id="main">
-  <section>
-    <div>
-      <div>
-        <h2>こどものなぜなぜを解決しましょう</h2>
-        <br/>
-        <ul>こんなことはありませんか？
-          <li>自分がわからないことを聞かれる</li>
-          <li>なぜなぜで困ったことがある</li>
-        </ul>
+  <main>
+    <section>
+    <!--/area1-->
+      <div class="contents">
+        <div>
+          <h2>こどものなぜなぜを解決しましょう</h2>
+          <br/>
+          <ul>こんなことはありませんか？
+            <li>自分がわからないことを聞かれる</li>
+            <li>なぜなぜで困ったことがある</li>
+          </ul>
+        </div>
+        <div>
+          <%= image_tag "nayami.png" %>
+        </div>
       </div>
-      <div>
-        <%= image_tag "kaiketu2.png" %>
+    </section>
+    <section>
+    <!--/area2-->
+      <div class="contents">
+        <div>
+          <%= image_tag "kaiwa.png" %>
+        </div>
+        <div>
+          <h2>こどものなぜなぜを解決しましょう</h2>
+          <br/>
+          <ul>こんなことはありませんか？
+            <li>自分がわからないことを聞かれる</li>
+            <li>なぜなぜで困ったことがある</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  <!--/area1--></section>
+    </section>
     <section>
-    <h2>
-    <%= link_to "みんなの投稿", search_histories_path%>
-    </h2>
-  <!--/area2--></section>
+    <!--/area3-->
+      <div>
+        <div class="contents">
+        <div>
+          <h2>こどものなぜなぜを解決しましょう</h2>
+          <br/>
+          <ul>こんなことはありませんか？
+            <li>自分がわからないことを聞かれる</li>
+            <li>なぜなぜで困ったことがある</li>
+          </ul>
+        </div>
+        <div>
+          <%= image_tag "mamatokaiwa.png" %>
+        </div>
+      </div>
+    </section>
     <section>
-    <h2>Area 3</h2>
-  <!--/area3--></section>
-    <section>
-    <h2>Area 4</h2>
-  <!--/area4--></section>
-  <!--/main--></main>
+    <!--/area4-->
+      <div class="contents">
+        <div class="link">
+          <%= link_to "みんなの投稿", search_histories_path%>
+        </div>
+      </div>
+    </section>
+  </main>
 
 <footer id="footer">
   <small>&copy; kaiketool</small>
@@ -49,7 +80,6 @@
 
 </body>
   <%= javascript_pack_tag 'first' %>
-  <%= javascript_pack_tag 'bokashi' %>
   <%= javascript_pack_tag 'link' %>
 
 
