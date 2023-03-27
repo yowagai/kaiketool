@@ -1,44 +1,56 @@
-<body>
+<header>
   <div id="splash">
     <div id="splash_logo">
-      <%= image_tag "rwnl1.png", class:"fadeUp" %>
+      <%= image_tag "kodomono.png", class:"fadeUp" %>
+      <%= image_tag "kaiketu2.png", class:"fadeUp" %>
     </div>
   </div>
-  <div id="container">
-  <main id="main">
-    <section>
-    <div>
-      <h2>
-      <%= link_to "かいけつしてみる？", speech_to_text_index_path %>
-      </h2>
+  <div class="kaiketu">
+    <div class="kaiketu-btn">
+        <%= button_to "かいけつしてみる？", speech_to_text_index_path, method: :get, class: "btn-link" %>
     </div>
-    <!--/area1--></section>
-      <section>
-      <h2>
-      <%= link_to "みんなの投稿", search_histories_path%>
-      </h2>
-    <!--/area2--></section>
-      <section>
-      <h2>Area 3</h2>
-    <!--/area3--></section>
-      <section>
-      <h2>Area 4</h2>
-    <!--/area4--></section>
+  </div>
+<header>
+
+<body>
+  <main id="main">
+  <section>
+    <div>
+      <div>
+        <h2>こどものなぜなぜを解決しましょう</h2>
+        <br/>
+        <ul>こんなことはありませんか？
+          <li>自分がわからないことを聞かれる</li>
+          <li>なぜなぜで困ったことがある</li>
+        </ul>
+      </div>
+      <div>
+        <%= image_tag "kaiketu2.png" %>
+      </div>
+    </div>
+  <!--/area1--></section>
+    <section>
+    <h2>
+    <%= link_to "みんなの投稿", search_histories_path%>
+    </h2>
+  <!--/area2--></section>
+    <section>
+    <h2>Area 3</h2>
+  <!--/area3--></section>
+    <section>
+    <h2>Area 4</h2>
+  <!--/area4--></section>
   <!--/main--></main>
 
-  <footer id="footer">
+<footer id="footer">
   <small>&copy; kaiketool</small>
-  </footer>
-  <!--/container--></div>
-
-<footer>
   <p id="page-top"><%= link_to "かいけつしよう！", speech_to_text_index_path%></p>
 </footer>
- 
+
+</body>
   <%= javascript_pack_tag 'first' %>
   <%= javascript_pack_tag 'bokashi' %>
   <%= javascript_pack_tag 'link' %>
-</body>
 
 
 

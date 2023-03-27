@@ -1,4 +1,54 @@
 /*========= レイアウトのためのCSS ===============*/
+.kaiketu-png{
+  margin-top: 10px;
+  width: 1000px;
+  height: 700px;
+}
+
+.kaiketu {
+  display: flex;
+  justify-content: space-around;
+  background-image: url('/assets/utyu.jpeg');
+  background-size: 100%;
+  width: 100%;
+  height: 700px;
+  padding: 0 40px;
+}
+
+.kaiketu-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-link {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 20px;
+  width: 10em;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+ }
+ 
+ .btn-link:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ .btn-link:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ .btn-link:disabled {
+  cursor: auto;
+  color: grey;
+ }
 
 h1{
   font-size:1.2rem;
@@ -12,20 +62,6 @@ h2{
 
 p{
   margin-top:20px;  
-}
-
-small{
-  color: black;
-  display: block;
-  text-align: center;
-}
-
-#header{
-  width:100%;
-  background: yellow;
-  color:black;
-  text-align: center;
-  padding: 20px;
 }
 
 section{
@@ -49,11 +85,17 @@ a{
 }
 
 a:hover{
-   text-decoration: none;   
+   text-decoration: none;
 }
 
 #container{
   width:100%;
   height: 100vh;
-  background: white;
+  background: gray;
+}
+
+small{
+  color: black;
+  display: block;
+  text-align: center;
 }

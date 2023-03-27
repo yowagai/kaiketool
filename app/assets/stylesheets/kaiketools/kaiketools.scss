@@ -22,7 +22,7 @@
   transform: translate(-50%, -50%);
 }
 
-/* Loading アイコンの大きさ設定　*/
+/* Loading アイコンの大きさ設定 */
 #splash_logo img {
   width:400px;
 }
@@ -69,6 +69,7 @@ opacity: 0;
   background:rgba(255,255,255,0.3);/*背景を少し透過させる*/
     /*動き*/
   transition: all 0.3s;
+  font-size: 25px;
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
@@ -168,10 +169,10 @@ opacity: 0;
   display: flex;
   justify-content:center;
   align-items:center;
-  background:#942D2F;
+  background:#FFB6C1;
   border-radius: 5px;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   color: #fff;
   text-align: center;
   text-transform: uppercase; 
