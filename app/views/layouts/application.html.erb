@@ -9,6 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<header>
+  <%= link_to(root_path, class:"toplogo") do %>
+      <%= image_tag 'kaiketu2.png' , size: '185x50', class:"toplogo" %>
+  <% end %>
+</header>
   <body>
     <div class="openbtn1">
       <span></span><span></span><span></span>
@@ -36,7 +41,8 @@
     </ul>
   </nav>
   <% end %>
-
     <%= yield %>
   </body>
 </html>
+  <%= javascript_pack_tag 'bokashi' %>
+

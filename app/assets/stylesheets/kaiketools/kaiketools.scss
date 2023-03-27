@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   z-index: 999;
-  background:#F0F8FF;
+  background:#F8F8FF;
   text-align:center;
   color:#fff;
 }
@@ -22,7 +22,7 @@
   transform: translate(-50%, -50%);
 }
 
-/* Loading アイコンの大きさ設定　*/
+/* Loading アイコンの大きさ設定 */
 #splash_logo img {
   width:400px;
 }
@@ -37,6 +37,25 @@ opacity: 0;
 }
 
 @keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.toplogo{
+  animation-name: fadeDownAnime;
+  animation-duration:0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownAnime{
   from {
     opacity: 0;
   transform: translateY(100px);
@@ -69,6 +88,7 @@ opacity: 0;
   background:rgba(255,255,255,0.3);/*背景を少し透過させる*/
     /*動き*/
   transition: all 0.3s;
+  font-size: 25px;
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
@@ -168,10 +188,10 @@ opacity: 0;
   display: flex;
   justify-content:center;
   align-items:center;
-  background:#942D2F;
+  background:#FFB6C1;
   border-radius: 5px;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   color: #fff;
   text-align: center;
   text-transform: uppercase; 

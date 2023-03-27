@@ -3,7 +3,7 @@ import $ from 'jquery';
 //スクロールした際の動きを関数でまとめる
 function PageTopAnime() {
   var scroll = $(window).scrollTop();
-  if (scroll >= 200){//上から200pxスクロールしたら
+  if (scroll >= 500){//上から500pxスクロールしたら
     $('#page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
     $('#page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
   }else{
