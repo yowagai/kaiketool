@@ -4,53 +4,9 @@
       <%= image_tag "rwnl1.png", class:"fadeUp" %>
     </div>
   </div>
-
-  <div class="openbtn1">
-    <span></span><span></span><span></span>
-  </div>
-
-  <% if user_signed_in? %>
-  <nav id="g-nav">
-    <ul>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>  
-      <li><a href="#">Top</a></li>  
-      <li><a href="#">About</a></li>  
-      <li><a href="#">Service</a></li>  
-      <li><a href="#">Contact</a></li>  
-    </ul>
-  </nav>
-  <% else %>
-  <nav id="g-nav">
-    <ul>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <li><a href="#">Top</a></li>  
-      <li><a href="#">About</a></li>  
-      <li><a href="#">Service</a></li>  
-      <li><a href="#">Contact</a></li>  
-    </ul>
-  </nav>
-  <% end %>
-
-<header id="header">
-    <h1>かいけつ〜る</h1>
-</header>
   <div id="container">
   <main id="main">
     <section>
-    <div>
-      <ul class="slider">
-        <li class="slider-item slider-item01">
-          <%= image_tag "utyu.png", rel:"preload", as:"image", id:"background-images", size: '540x270'%>
-        </li>
-        <li class="slider-item slider-item02">
-          <%# <%= image_tag "utyuu-illust2.png", rel:"preload", as:"image", id:"background-images", size: '540x270' %>
-        </li>
-        <li class="slider-item slider-item03">
-          <%# <%= image_tag "utyuu-illust2.png", rel:"preload", as:"image", id:"background-images", size: '540x270' %>
-        </li>
-      </ul>
-    </div>
     <div>
       <h2>
       <%= link_to "かいけつしてみる？", speech_to_text_index_path %>
@@ -71,7 +27,7 @@
   <!--/main--></main>
 
   <footer id="footer">
-  <small>&copy; copyright.</small>
+  <small>&copy; kaiketool</small>
   </footer>
   <!--/container--></div>
 
@@ -82,7 +38,6 @@
   <%= javascript_pack_tag 'first' %>
   <%= javascript_pack_tag 'bokashi' %>
   <%= javascript_pack_tag 'link' %>
-  <%= javascript_pack_tag 'slider' %>
 </body>
 
 

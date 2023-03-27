@@ -5,14 +5,38 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="openbtn1">
+      <span></span><span></span><span></span>
+    </div>
+
+  <% if user_signed_in? %>
+  <nav id="g-nav">
+    <ul>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>  
+      <li><a href="#">Top</a></li>  
+      <li><a href="#">About</a></li>  
+      <li><a href="#">Service</a></li>  
+      <li><a href="#">Contact</a></li>  
+    </ul>
+  </nav>
+  <% else %>
+  <nav id="g-nav">
+    <ul>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <li><a href="#">Top</a></li>  
+      <li><a href="#">About</a></li>  
+      <li><a href="#">Service</a></li>  
+      <li><a href="#">Contact</a></li>  
+    </ul>
+  </nav>
+  <% end %>
+
     <%= yield %>
   </body>
 </html>
