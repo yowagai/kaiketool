@@ -4,7 +4,7 @@ require 'googleauth/stores/file_token_store'
 
 class SearchHistoriesController < ApplicationController
   def index
-    @search_history = SearchHistory.includes(:user).order('created_at DESC')
+    @search_histories = SearchHistory.includes(:user).order('created_at DESC').paginate(page: params[:page], per_page: 4)
   end
 
   def new

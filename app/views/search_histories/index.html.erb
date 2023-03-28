@@ -1,4 +1,14 @@
-<% @search_history.each do |history| %>
+<div class="history-main">
+  <div class="history-wrap">
+    <div class="history-html">
+      <div class="history-title">
+      みんなのなぜ結果
+      </div>
+      <div class="history-form">
+      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+      <% @search_histories.each do |history| %>
+        <div class="history-htm1">
+        <div class="">
       <h3 class='item-name'>
         <%= history.title %>
       </h3>
@@ -9,7 +19,15 @@
         <span><%= history.background %><br>
               <%= history.type.name %></span>
       </div>
-<% end %>
+      <% end %>
+      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
     <span class='purchase-btn-text'>検索に戻る</span>
