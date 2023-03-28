@@ -10,8 +10,8 @@ class SpeechToTextController < ApplicationController
     storage_path = "gs://kaiketool/test.flac"
 
     config = { encoding:          :FLAC,    #FLAC、LINEAR16が対応
-               sample_rate_hertz: 44_100,   #サンプリングレート
-               language_code:     "ja-JP" } #日本語に設定
+              sample_rate_hertz: 44_100,   #サンプリングレート
+              language_code:     "ja-JP" } #日本語に設定
     audio = { uri: storage_path }
 
     operation = speech.long_running_recognize config: config, audio: audio

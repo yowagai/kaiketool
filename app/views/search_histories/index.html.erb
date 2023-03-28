@@ -1,4 +1,13 @@
+<div class="history-main">
+  <div class="history-wrap">
+    <div class="history-html">
+      <div class="history-title">
+      みんなのなぜ結果
+      </div>
+      <div class="history-form">
 <% @search_history.each do |history| %>
+        <div class="history-htm1">
+        <div class="">
       <h3 class='item-name'>
         <%= history.title %>
       </h3>
@@ -10,6 +19,13 @@
               <%= history.type.name %></span>
       </div>
 <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
     <span class='purchase-btn-text'>検索に戻る</span>
