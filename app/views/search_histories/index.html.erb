@@ -5,7 +5,8 @@
       みんなのなぜ結果
       </div>
       <div class="history-form">
-<% @search_history.each do |history| %>
+      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+      <% @search_histories.each do |history| %>
         <div class="history-htm1">
         <div class="">
       <h3 class='item-name'>
@@ -18,7 +19,8 @@
         <span><%= history.background %><br>
               <%= history.type.name %></span>
       </div>
-<% end %>
+      <% end %>
+      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
           </div>
         </div>
       </div>

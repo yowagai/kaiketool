@@ -73,7 +73,6 @@ opacity: 0;
   filter: blur(8px);
 }
 
-
 /*========= ナビゲーションのためのCSS ===============*/
 
 #g-nav{
@@ -85,10 +84,11 @@ opacity: 0;
   top:0;
   width:100%;
     height: 100vh;/*ナビの高さ*/
-  background:rgba(255,255,255,0.3);/*背景を少し透過させる*/
+  background:rgba(255,255,255,0.8);/*背景を少し透過させる*/
     /*動き*/
   transition: all 0.3s;
   font-size: 25px;
+  font-family: "Nico Moji";
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/

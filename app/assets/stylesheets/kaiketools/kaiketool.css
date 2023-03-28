@@ -27,33 +27,34 @@ header {
 }
 
 .btn-link {
-  background-color: #eee;
+  background-color: #FF8047;
   border: none;
-  padding: 1rem;
-  font-size: 20px;
-  width: 10em;
-  border-radius: 1rem;
-  color: lightcoral;
-  box-shadow: 0 0.4rem #dfd9d9;
+  padding: 30px;
+  font-size: 30px;
+  width: 350px;
+  border-radius: 15px;
+  color: #FBEDEB;
+  box-shadow: 0 5px #dfd9d9;
   cursor: pointer;
- }
- 
- .btn-link:active {
+  font-family: "Nico Moji";
+}
+
+.btn-link:active {
   color: white;
   box-shadow: 0 0.2rem #dfd9d9;
   transform: translateY(0.2rem);
- }
- 
- .btn-link:hover:not(:disabled) {
-  background: lightcoral;
+}
+
+.btn-link:hover:not(:disabled) {
+  background: #636363;
   color: white;
   text-shadow: 0 0.1rem #bcb4b4;
- }
- 
- .btn-link:disabled {
+}
+
+.btn-link:disabled {
   cursor: auto;
   color: grey;
- }
+}
 
 main{
   display: flex;
@@ -66,11 +67,11 @@ section{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FFEFD5;
+  background: white;
 }
 
 section:nth-child(2n){
-  background:#FFFFE0; 
+  background:white; 
 }
 
 .contents{
@@ -78,6 +79,7 @@ section:nth-child(2n){
   justify-content: space-around;
   width: 1200px;
   align-items: center;
+  font-family: "Nico Moji";
 }
 
 .link{
