@@ -1,7 +1,7 @@
 /*========= レイアウトのためのCSS ===============*/
 header {
   height: 50px;
-  background: #F8F8FF;
+  background: #FFC0CB;
 }
 
 .kaiketu-png{
@@ -90,7 +90,7 @@ p{
 
 
 #footer{
-  background: #F0F8FF;
+  background: #FFC0CB;
   padding:20px;
 }
 
@@ -99,7 +99,7 @@ a{
 }
 
 a:hover{
-   text-decoration: none;
+  text-decoration: none;
 }
 
 small{
