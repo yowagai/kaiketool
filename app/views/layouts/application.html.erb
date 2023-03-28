@@ -23,9 +23,9 @@
   <nav id="g-nav">
     <ul>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>  
-      <li><a href="#">Top</a></li>  
-      <li><a href="#">About</a></li>  
-      <li><a href="#">Service</a></li>  
+      <li><%= link_to 'トップページ', root_path, class: "" %></li>  
+      <li><%= link_to 'けんさく', speech_to_text_index_path, class: "" %></li>  
+      <li><%= link_to 'みんなのなぜ', search_histories_path, class: "" %></li>  
       <li><a href="#">Contact</a></li>  
     </ul>
   </nav>
@@ -34,9 +34,9 @@
     <ul>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <li><a href="#">Top</a></li>  
-      <li><a href="#">About</a></li>  
-      <li><a href="#">Service</a></li>  
+      <li><%= link_to 'トップページ', root_path, class: "" %></li>  
+      <li><%= link_to 'けんさく', speech_to_text_index_path, class: "" %></li>  
+      <li><%= link_to 'みんなのなぜ', search_histories_path, class: "" %></li>  
       <li><a href="#">Contact</a></li>  
     </ul>
   </nav>

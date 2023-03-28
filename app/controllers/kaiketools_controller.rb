@@ -2,24 +2,6 @@ class KaiketoolsController < ApplicationController
   def index
   end
 
-  def new
-    @kaiketool = Kaiketool.new
-  end
-
-  def create
-    binding.pry
-    @kaiketool = Kaiketool.new(kaiketool_params)
-    if @kaiketool.save
-      redirect_to kaiketool_path
-    else
-      render "google_custom_search/index"
-    end
-  end
-
-  def show
-
-  end
-
   def search
     google_custom_search
   end
