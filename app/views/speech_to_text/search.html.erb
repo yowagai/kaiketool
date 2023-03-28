@@ -1,5 +1,36 @@
-<h1>なぜなぜ検索</h1>
-<%= form_tag(search_search_histories_path, method: :get) do %>
-  <%= text_field_tag(:q, @transcriptions) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class="search-main">
+  <div class="search-wrap">
+    <div class="search-html">
+      <div class="search-title">
+      わからないことを調べよう
+      </div>
+      <div class="search-form">
+        <div class="search-voice-htm">
+              <div class="">はなしかけてみよ
+              </div>
+              <div class="">
+              <%= link_to(search_speech_to_text_index_path, class:"") do %>
+                <%= image_tag 'voice.png' , size: '150x300', class:"" %>
+              <% end %>
+              </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <a href=""></a>
+          </div>
+        </div>
+        <div class="search-htm">
+              <div class="">
+              <%= form_with url: search_search_histories_path, method: :get, local: true do |f| %>
+                <%= f.text_field :q, value: @transcriptions, class:"input" %><br/>
+                <%= f.submit "けんさく", class:"button" %>
+              <% end %>
+              </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

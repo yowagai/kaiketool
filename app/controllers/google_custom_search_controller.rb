@@ -7,7 +7,6 @@ class GoogleCustomSearchController < ApplicationController
 
   def search
     google_custom_search
-    # redirect_to "kaiketools/new"
   end
 
   private
