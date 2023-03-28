@@ -35,6 +35,9 @@ class SearchHistoriesController < ApplicationController
   end
 
   def google_custom_search
+    if params[:q].blank?
+      render "speech_to_text/index"
+    end
     @title = params[:q]
 
     # Custom Search APIを呼び出すためのクライアントを作成します
@@ -45,8 +48,8 @@ class SearchHistoriesController < ApplicationController
     search_params = {
       q: params[:q], # 検索クエリ
       cx: ENV['GOOGLE_CX'], # カスタム検索エンジンID
-      num: 3, # 1回のAPIリクエストで返される検索結果の数
-      start: 1, # 検索結果の開始位置
+      num: 4, # 1回のAPIリクエストで返される検索結果の数
+      start: 3, # 検索結果の開始位置
       search_type: 'image', # 検索タイプ
       img_size: 'medium', # 画像サイズのフィルター
       cr: 'countryJP', # 検索範囲の指定
