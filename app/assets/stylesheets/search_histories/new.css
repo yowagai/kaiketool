@@ -1,6 +1,6 @@
 body{
   color:#6a6f8c;
-  font:600 16px/18px 'Open Sans',sans-serif;
+  font-family: "Nico Moji";
 }
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
