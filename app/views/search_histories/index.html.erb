@@ -4,26 +4,24 @@
       <div class="history-title">
       みんなのなぜ結果
       </div>
+      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
       <div class="history-form">
-      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
-      <% @search_histories.each do |history| %>
+        <% @search_histories.each do |history| %>
         <div class="history-htm1">
-        <div class="">
-      <h3 class='item-name'>
-        <%= history.title %>
-      </h3>
-    <div class='item-img-content'>
-      <%= image_tag (history.image), class: "item-img" %>
-    </div>
-      <div class=''>
-        <span><%= history.background %><br>
-              <%= history.type.name %></span>
-      </div>
-      <% end %>
-      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
-          </div>
+          <div class="">
+          <h3 class='item-name'>
+          <%= history.title %>
+          </h3>
+          <div class='item-img-content'>
+          <%= image_tag (history.image), class: "item-img" %>
         </div>
+        <%# <div class=''> %>
+          <%# <span><%= history.background %><br> %>
+                <%# <%= history.type.name %></span> %>
+        <%# </div> %>
       </div>
+        <% end %>
+        <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
     </div>
   </div>
 </div>
