@@ -26,9 +26,10 @@ https://kaiketool.onrender.com
 要件を定義したシート  https://docs.google.com/spreadsheets/d/1UUPdMAMZNTHUXTNeurIpLWI-mFuVkW2Jd6XsSVwnK_c/edit#gid=1477306112
   
 # 実装した機能についての画像やGIFおよび説明
------------------- 
+------------------  
+
 ## トップページで子供が喜びそうなアクションをいくつかつけています  
-[![Image from Gyazo](https://i.gyazo.com/bbd7838fcd653feb97962006e9dcb9e2.gif)](https://gyazo.com/bbd7838fcd653feb97962006e9dcb9e2)  
+[![Image from Gyazo](https://i.gyazo.com/40cefefee6bcad937ba44f9255bc4ca3.gif)](https://gyazo.com/40cefefee6bcad937ba44f9255bc4ca3)  
   
 ## 音声をgoogle cloud speechで読み取り、テキスト化します  
 [![Image from Gyazo](https://i.gyazo.com/c55788fc6f811df5ed99c2b1ba66bbeb.gif)](https://gyazo.com/c55788fc6f811df5ed99c2b1ba66bbeb)  
