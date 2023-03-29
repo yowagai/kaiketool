@@ -12,6 +12,11 @@
     <div class="kaiketu-btn">
         <%= button_to "かいけつしてみる？", speech_to_text_index_path, method: :get, class: "btn-link" %>
     </div>
+    <ul class="slider">
+    <li class="slider-item slider-item01"></li>
+    <li class="slider-item slider-item02"></li>
+    <li class="slider-item slider-item03"></li>
+    </ul>
   </div>
   <main>
     <section>
@@ -65,6 +70,7 @@
     </section>
     <section>
     <!--/area4-->
+      <%= image_tag "utyujin.png", class:"fuwafuwa" %>
       <div class="contents">
         <div class="link">
           <%= link_to "みんなの投稿", search_histories_path , class:"btn-link" %>
@@ -73,10 +79,10 @@
     </section>
   </main>
 
-<footer id="footer">
-  <small>&copy; kaiketool</small>
-  <p id="page-top"><%= link_to "かいけつしよう！", speech_to_text_index_path%></p>
-</footer>
+  <footer id="footer">
+    <small>&copy; kaiketool</small>
+    <p id="page-top"><%= link_to "かいけつしよう！", speech_to_text_index_path%></p>
+  </footer>
 
 </body>
   <%= javascript_pack_tag 'first' %>

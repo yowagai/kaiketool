@@ -1,0 +1,32 @@
+<body>
+  <div class="hoge">
+    <div class="hoge-btn">
+        <%= button_to "かいけつしてみる？", speech_to_text_index_path, method: :get, class: "btn-link" %>
+    </div>
+    <ul class="slider">
+    <li class="slider-item slider-item01"></li>
+    <li class="slider-item slider-item02"></li>
+    <li class="slider-item slider-item03"></li>
+    </ul>
+  </div>
+  
+  <main>
+    <section>
+    <!--/area1-->
+      <div class="contents">
+        <div>
+          <h2>こどものなぜなぜを解決しましょう</h2>
+          <br/>
+          <ul>こんなことはありませんか？
+            <li>自分がわからないことを聞かれる</li>
+            <li>なぜなぜで困ったことがある</li>
+          </ul>
+        </div>
+        <div>
+          <%= image_tag "nayami.png" %>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
