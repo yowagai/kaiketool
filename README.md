@@ -8,14 +8,14 @@
   
 # URL
 ------------------ 
-（https://kaiketool.onrender.com）  
+https://kaiketool.onrender.com  
 
 # テスト用アカウント
 ------------------ 
 ・Basic認証パスワード：2221  
 ・Basic認証ID：aadmin  
-・メールアドレス：  
-・パスワード：  
+・メールアドレス：aaa@co.jp  
+・パスワード：q0000000  
 
 # アプリケーションを作成した背景
 ------------------ 
@@ -23,10 +23,23 @@
 
 # 洗い出した要件
 ------------------ 
-要件を定義したシート  （https://docs.google.com/spreadsheets/d/1UUPdMAMZNTHUXTNeurIpLWI-mFuVkW2Jd6XsSVwnK_c/edit#gid=1477306112）
+要件を定義したシート  https://docs.google.com/spreadsheets/d/1UUPdMAMZNTHUXTNeurIpLWI-mFuVkW2Jd6XsSVwnK_c/edit#gid=1477306112
   
 # 実装した機能についての画像やGIFおよび説明
 ------------------ 
+## トップページで子供が喜びそうなアクションをいくつかつけています  
+[![Image from Gyazo](https://i.gyazo.com/bbd7838fcd653feb97962006e9dcb9e2.gif)](https://gyazo.com/bbd7838fcd653feb97962006e9dcb9e2)  
+  
+## 音声をgoogle cloud speechで読み取り、テキスト化します  
+[![Image from Gyazo](https://i.gyazo.com/c55788fc6f811df5ed99c2b1ba66bbeb.gif)](https://gyazo.com/c55788fc6f811df5ed99c2b1ba66bbeb)  
+  
+## 検索した言葉を画像で何パターンか表示します  
+[![Image from Gyazo](https://i.gyazo.com/ba3a2a15d913897e67e54995c440a3e0.gif)](https://gyazo.com/ba3a2a15d913897e67e54995c440a3e0)  
+  
+## 調べた言葉をみんなでシェアできます  
+[![Image from Gyazo](https://i.gyazo.com/e7973d4e53eeb0568b7de6f30a510fec.png)](https://gyazo.com/e7973d4e53eeb0568b7de6f30a510fec)  
+  
+  
   
 # 実装予定の機能
 ------------------ 
@@ -44,8 +57,8 @@
 # 開発環境
 ------------------ 
 ### バックエンド  
-・Ruby 3.0.2  
-・Rails 6.1.3  
+・Ruby 2.6.5  
+・Rails 6.0.0  
   
 ### フロントエンド  
 ・HTML  
