@@ -63,14 +63,12 @@
           <%= f.label :フリガナ（半角カナ）, class:"label" %><br />
           <%= f.text_field :parent_name_kana, autofocus: true, autocomplete: "", class:"input" %>
         </div>
-        <div class="group">
-          <%= f.label :性別, class:"label" %><br />
-          <div class="sel-inp">
-            <div class="hoge">
+          <div class="group">
+            <%= f.label :性別, class:"label" %><br />
+            <div class="sel-inp">
               <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"sel-inp"}) %>
             </div>
-          </div>
-        </div>
+          </div> 
         <div class="group">
           <%= f.label :お子さんの誕生日, class:"label" %><br />
           <%= raw sprintf(

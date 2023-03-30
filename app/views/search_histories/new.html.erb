@@ -3,6 +3,9 @@
     <div class="result-html">
       <div class="result-title">
       いちばん近い画像をほぞんしよう
+      <% if user_signed_in? %>
+        とうろくすればほぞんできるよ
+      <% end %>
       </div>
       <div class="result-form">
         <% @image_urls.each do |url|  %>
@@ -10,13 +13,13 @@
           <%= form_with model: @search_history, url: search_histories_path, method: :post, local: true do |f|%>
           <div class="htm1-con">
             <div class="htm1-up">
-              <div class="htm1-right">1
+              <div class="htm1-right">
                 <%= f.label :title, "なぜなぜキーワード" %><br>
                 <%= f.hidden_field :title, value: @title %>
                 <!-- valueオプションを使って、@titleをフォームに表示する -->
                 <%= @title %>
               </div>
-              <div class="htm1-left">2
+              <div class="htm1-left">
                 <% if user_signed_in? %>
                   <%= f.submit "これだ！", class: :form__btn  %>
                 <% end %>
@@ -24,18 +27,18 @@
             </div>
 
             <div class="htm1-down">
-              <div class="img-tit">3
+              <div class="img-tit">
                 <%= f.label :image, "なぜなぜ画像" %><br>
                 <%= f.hidden_field :image, value: url %>
                 <!-- hidden_fieldを使って、@image_urlsの情報をformに送信する -->
               </div>
-              <div class="result-img">4
+              <div class="result-img">
                 <%= image_tag url, size: '350x200' %>
               </div>
-              <div class="exp-tit">5
+              <div class="exp-tit">
                 <%= f.label :background, "なぜなぜの説明" %><br>
               </div>
-              <div class="result-exp">6
+              <div class="result-exp">
                 <%= f.text_area :background, value: "ここに説明が入ります" %>
               </div>
             </div>
@@ -55,3 +58,7 @@
     </div>
   </div>
 </div>
+<%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>もどる</span>
+    <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>

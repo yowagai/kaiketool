@@ -4,33 +4,22 @@
       <div class="search-title">
       わからないことを調べよう
       </div>
-      <div class="search-form">
-        <div class="search-voice-htm">
-              <div class="">はなしかけてみよ
-              </div>
-              <div class="">
-              <%= link_to(search_speech_to_text_index_path, class:"") do %>
-                <%= image_tag 'voice.png' , size: '60x120', class:"" %>
-              <% end %>
-              </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <a href=""></a>
-          </div>
-        </div>
-        <div class="search-htm">
-              <div class="">
-              <%= form_with url: search_search_histories_path, method: :get, local: true do |f| %>
-                <%= f.text_field :q, class:"input" %><br/>
-                <%= f.submit "けんさく", class:"button" %>
-              <% end %>
-              </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <a href=""></a>
-          </div>
-        </div>
+      <div class="search-icn-voice">
+      きいてみる？
       </div>
+      <div class="search-icn">
+      <%= link_to(search_speech_to_text_index_path, class:"") do %>
+        <%= image_tag '25.png' , size: '155x120', class:"" %>
+      <% end %>
+      </div>
+      <div class="search-form">
+      <%= form_with url: search_search_histories_path, method: :get, local: true do |f| %>
+        <%= f.text_field :q, class:"input" %>
+      </div>
+      <div class="search-btn">
+        <%= f.submit "けんさく", class:"button" %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

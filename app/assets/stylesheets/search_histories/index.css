@@ -61,6 +61,21 @@ a{color:inherit;text-decoration:none}
 .his-top{
   display: flex;
   justify-content: flex-start;
+  font-size: 30px;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.his-son {
+  font-size: 50px;
+  line-height: 50px;
+  color: brown;
+}
+
+.his-birthday {
+  font-size: 50px;
+  line-height: 50px;
+  color: rgb(211, 12, 12);
 }
 
 .his-down{
@@ -68,14 +83,52 @@ a{color:inherit;text-decoration:none}
   justify-content: space-between;
 }
 
-.his-left{
-  display: block;
-  justify-content: flex-start;
+.his-right{
+
 }
 
-.his-left-down{
+.title-con{
+  width: 400px;
+  height: 50px;
+  background-color: aqua;
+}
+
+.his-title-ex{
+font-size: 15px;
+display: flex;
+
+
+}
+
+.his-tit{
+font-size: 25px;
+}
+
+.exp-con{
+  height: 200px;
+  background-color: aquamarine;
+
+}
+
+.his-exp-ex{
   display: flex;
-  justify-content: space-between;
+}
+
+.his-exp{
+  font-size: 20px;
+}
+
+.his-right-down{
+  height: 50px;
+  background-color: aqua;
+}
+
+.his-back-ex{
+  display: flex;
+}
+
+.his-back{
+  font-size: 20px;
 }
 
 

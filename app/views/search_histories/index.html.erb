@@ -11,33 +11,47 @@
           <div class="his-con">
             <div class="his-top">
               <div class="his-son">
-                <%= history.user.child_name %>くん
+                <%= history.user.child_name %>
               </div>
+              <% if history.user.sex_id == 2 %>
+                くん<p>&emsp;</p>
+              <% else %>
+                ちゃん<p>&emsp;</p>
+              <% end %>
               <div class="his-birthday">
-                <%= history.age %>さい
+                <%= history.age %>
               </div>
+                さい&emsp;&emsp;のなぜなぜ
             </div>
 
             <div class="his-down">
-              <div class="his-right">
-                <%= image_tag (history.image), size: '350x200' %>
-              </div>
               <div class="his-left">
-                <div class="his-title">
-                  <%= history.title %>
-                </div>
-                <div class="his-exp">
-                eeee
-                </div>
-                <div class="his-left-down">
-                  <div class="his-fav">
-                    <span>
-                      <%= history.background %><br>
-                      <%= history.type.name %>
-                    </span>
+                <%= image_tag (history.image), size: '400x350' %>
+              </div>
+              <div class="his-rigth">
+                <div class="title-con">
+                  <div class="his-title-ex">
+                    けんさくキーワード
                   </div>
-                  <div class="his-coment">
-                  ooo
+                  <div class="his-tit">
+                    <%= history.title %>
+                  </div>
+                </div>
+                <div class="exp-con">
+                  <div class="his-exp-ex">
+                  キーワードのせつめい
+                  </div>
+                  <div class="his-exp">
+                  せつめいせつめいせつめい
+                  </div>
+                </div>
+                <div class="his-right-down">
+                  <div class="his-back-ex">
+                    なぜ？となったきっかけ
+                      <%# <%= history.type.name %>
+                  </div>
+                  <div class="his-back">
+                    <%= history.background %><br>
                   </div>
                 </div>
               </div>
@@ -51,8 +65,8 @@
   </div>
 </div>
 <%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>検索に戻る</span>
-    <%= image_tag 'search.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+    <span class='purchase-btn-text'>もどる</span>
+    <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
           <div class="">
           </div>
