@@ -152,10 +152,16 @@ a{color:inherit;text-decoration:none}
   text-align:center;
 }
 
+.birth-date-select,
 .sel-inp {
   position: relative;
+margin-bottom: 10px;
 }
 
+.birth-date-select::before,
+.birth-date-select::after,
+.birth-date-select::before,
+.birth-date-select::after,
 .sel-inp::before,
 .sel-inp::after {
   position: absolute;
@@ -163,6 +169,7 @@ a{color:inherit;text-decoration:none}
   pointer-events: none;
 }
 
+.birth-date-select::before,
 .sel-inp::before {
   right: 0;
   display: inline-block;
@@ -173,6 +180,7 @@ a{color:inherit;text-decoration:none}
   content: '';
 }
 
+.birth-date-select::after,
 .sel-inp::after {
   position: absolute;
   top: 50%;
@@ -185,6 +193,7 @@ a{color:inherit;text-decoration:none}
   content: '';
 }
 
+.birth-date-select select,
 .sel-inp select {
   appearance: none;
   -webkit-appearance: none;
@@ -200,6 +209,17 @@ a{color:inherit;text-decoration:none}
   background:rgba(200,100,100,.1);
 }
 
+.birth-date-select select:focus,
 .sel-inp select:focus {
   outline: 1px solid #FF8047;
 }
+
+// .group-birth {
+//   margin-bottom: 20px;
+// }
+
+// .birth-date-select {
+//   margin-top: 10px;
+//   width: 200px;
+//   font-size: 16px;
+// }
