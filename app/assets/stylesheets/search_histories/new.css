@@ -1,6 +1,5 @@
 body{
   color:#6a6f8c;
-  font-family: "Nico Moji";
 }
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
@@ -11,13 +10,13 @@ a{color:inherit;text-decoration:none}
   margin:5px;
   width:100%;
   background-image: url('/assets/resultback.jpg');
+  font-family: "Nico Moji";
 }
 
 .result-wrap{
-  width:100%;
   margin:auto;
-  max-width:1200px;
-  min-height:1000px;
+  width:1000px;
+  height:1000px;
   position:relative;
   background: #FAF0E6;
   box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
@@ -26,7 +25,7 @@ a{color:inherit;text-decoration:none}
   width:100%;
   height:100%;
   position:absolute;
-  padding:20px 30px 20px 30px;
+  padding:20px;
   display: block;
   text-align: center;
 }
@@ -36,21 +35,37 @@ a{color:inherit;text-decoration:none}
   padding-bottom: 10px;
 }
 .result-form{
-  height: 100%;
-  width: 100%;
+  position:absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  perspective:1000px;
-  transform-style:preserve-3d;
 }
 
 .result-htm1{
-  width: 270px;
-  height: 550px;
+  position:relative;
+  width: 400px;
+  height: 420px;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 15px 10px 15px;
   box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 
-.result-form .button{
+.htm1-con{
+  display: block;
+  align-items: center;
+}
+
+.htm1-up{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .result-img{
+  width: 380px;
+  height: 350px;
+} */
+
+/* .result-form .button{
   width:100%;
   color:#696969;
   display:block;
@@ -69,4 +84,4 @@ a{color:inherit;text-decoration:none}
   padding:15px 20px;
   border-radius:25px;
   background:rgba(27, 9, 165, 0.1);
-}
+} */

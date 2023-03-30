@@ -65,7 +65,11 @@
         </div>
         <div class="group">
           <%= f.label :性別, class:"label" %><br />
-          <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"user-sex"}) %>
+          <div class="sel-inp">
+            <div class="hoge">
+              <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"sel-inp"}) %>
+            </div>
+          </div>
         </div>
         <div class="group">
           <%= f.label :お子さんの誕生日, class:"label" %><br />
@@ -73,7 +77,7 @@
                         f.date_select(
                           :birthday,
                           class:'select-birth',
-                          id:"birth-date",
+                          id:"input",
                           use_month_numbers: true,
                           prompt:'--',
                           start_year: 2005,
