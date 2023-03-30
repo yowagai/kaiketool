@@ -31,7 +31,7 @@
       </div>
 
       <div class="sign-up-htm">
-      <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
         <%= render 'shared/error_messages', model: f.object %>
         <div class="group">
           <%= f.label :アドレス ,class:"label" %><br />
@@ -75,10 +75,10 @@
             <div class="birth-date-select">
               <%= birth_date_select(f, :birthday) %>
             </div>
-        <div class="group">
-          <%= f.submit "とうろく" , class:"button"%>
-        </div>
-      <% end %>
+          <div class="group">
+            <%= f.submit "とうろく" , class:"button"%>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
