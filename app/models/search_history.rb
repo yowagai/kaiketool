@@ -3,4 +3,11 @@ class SearchHistory < ApplicationRecord
   belongs_to :type
   belongs_to :user
 
+  def age
+    now = Time.zone.now
+    age = now.year - user.birthday.year
+    age -= 1 if now.month < user.birthday.month || (now.month == user.birthday.month && now.day < user.birthday.day)
+    age
+  end
+
 end

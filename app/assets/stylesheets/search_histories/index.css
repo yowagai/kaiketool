@@ -17,11 +17,9 @@ a{color:inherit;text-decoration:none}
 }
 
 .history-wrap{
-  width:100%;
+  width:1000px;
   height: 1800px;
   margin:auto;
-  max-width:1200px;
-  min-height:1000px;
   position:relative;
   background: #FAF0E6;
   box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
@@ -36,7 +34,6 @@ a{color:inherit;text-decoration:none}
 .history-title{
   font-size: 55px;
   line-height: 80px;
-  padding-bottom: 10px;
 }
 .history-form{
   height: 100%;
@@ -49,12 +46,40 @@ a{color:inherit;text-decoration:none}
 }
 
 .history-htm1{
-  width: 700px;
-  height: 300px;
+  width: 850px;
+  height: 450px;
   box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+  padding: 10px 15px 10px 15px;
+  margin: 10px 15px 10px 15px;
 }
 
-.history-form .button{
+.his-con{
+  display:block;
+  align-items: center;
+}
+
+.his-top{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.his-down{
+  display: flex;
+  justify-content: space-between;
+}
+
+.his-left{
+  display: block;
+  justify-content: flex-start;
+}
+
+.his-left-down{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* .history-form .button{
   width:100%;
   color:#696969;
   display:block;
@@ -73,4 +98,4 @@ a{color:inherit;text-decoration:none}
   padding:15px 20px;
   border-radius:25px;
   background:rgba(27, 9, 165, 0.1);
-}
+} */

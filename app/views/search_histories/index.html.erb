@@ -8,20 +8,45 @@
       <div class="history-form">
         <% @search_histories.each do |history| %>
         <div class="history-htm1">
-          <div class="">
-          <h3 class='item-name'>
-          <%= history.title %>
-          </h3>
-          <div class='item-img-content'>
-          <%= image_tag (history.image), class: "item-img" %>
+          <div class="his-con">
+            <div class="his-top">
+              <div class="his-son">
+                <%= history.user.child_name %>くん
+              </div>
+              <div class="his-birthday">
+                <%= history.age %>さい
+              </div>
+            </div>
+
+            <div class="his-down">
+              <div class="his-right">
+                <%= image_tag (history.image), size: '350x200' %>
+              </div>
+              <div class="his-left">
+                <div class="his-title">
+                  <%= history.title %>
+                </div>
+                <div class="his-exp">
+                eeee
+                </div>
+                <div class="his-left-down">
+                  <div class="his-fav">
+                    <span>
+                      <%= history.background %><br>
+                      <%= history.type.name %>
+                    </span>
+                  </div>
+                  <div class="his-coment">
+                  ooo
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <%# <div class=''> %>
-          <%# <span><%= history.background %><br> %>
-                <%# <%= history.type.name %></span> %>
-        <%# </div> %>
-      </div>
         <% end %>
-        <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+      </div>
+      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
     </div>
   </div>
 </div>
@@ -29,3 +54,5 @@
     <span class='purchase-btn-text'>検索に戻る</span>
     <%= image_tag 'search.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
+          <div class="">
+          </div>
