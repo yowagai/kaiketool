@@ -9,15 +9,15 @@
   pointer-events: none;
 }
 
-.hoge::before {
-  right: 0;
-  display: inline-block;
-  width: 2.8em;
-  height: 2.8em;
-  border-radius: 0 25px 25px 0;
-  background-color: #d4de3f;
-  content: '';
-}
+// .hoge::before {
+//   right: 0;
+//   display: inline-block;
+//   width: 2.8em;
+//   height: 2.8em;
+//   border-radius: 0 25px 25px 0;
+//   background-color: #FFBFBE;
+//   content: '';
+// }
 
 .hoge::after {
   position: absolute;
@@ -35,10 +35,10 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  min-width: 230px;
+  width: 350px;
   height: 2.8em;
-  padding: 5px;
-  border: 2px solid #d4de3f;
+  padding: .4em 3.6em .4em .8em;
+  border: 2px solid rgba(200,100,100,.1);
   border-radius: 25px;
   color: #525151;
   font-size: 1em;
@@ -46,5 +46,5 @@
 }
 
 .hoge select:focus {
-  outline: 1px solid #d4de3f;
+  outline: 1px solid #FF8047;
 }

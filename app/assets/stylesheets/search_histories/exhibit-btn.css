@@ -23,7 +23,7 @@
 }
 
 .purchase-btn:hover:not(:disabled) {
-  background: #cf6868;
+  background: #636363;
   color: white;
   text-shadow: 0 0.1rem #bcb4b4;
 }

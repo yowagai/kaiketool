@@ -2,9 +2,9 @@
   <div class="result-wrap">
     <div class="result-html">
       <div class="result-title">
-      いちばん近い画像をほぞんしよう
-      <% if user_signed_in? %>
-        とうろくすればほぞんできるよ
+      いちばん近い画像をほぞんしよう<br>
+      <% unless user_signed_in? %>
+        <%= link_to "とうろくすればほぞんできるよ", new_user_registration_path , class:"btn-link" %>
       <% end %>
       </div>
       <div class="result-form">
@@ -13,15 +13,19 @@
           <%= form_with model: @search_history, url: search_histories_path, method: :post, local: true do |f|%>
           <div class="htm1-con">
             <div class="htm1-up">
-              <div class="htm1-right">
-                <%= f.label :title, "なぜなぜキーワード" %><br>
-                <%= f.hidden_field :title, value: @title %>
-                <!-- valueオプションを使って、@titleをフォームに表示する -->
-                <%= @title %>
+              <div class="right-title">
+                <div class="htm1-right">
+                  <%= f.label :title, "なぜなぜキーワード" %><br>
+                  <%= f.hidden_field :title, value: @title %>
+                  <!-- valueオプションを使って、@titleをフォームに表示する -->
+                </div>
+                <div class="htm1-title">
+                  <%= @title %>
+                </div>
               </div>
               <div class="htm1-left">
                 <% if user_signed_in? %>
-                  <%= f.submit "これだ！", class: :form__btn  %>
+                  <%= f.submit "これだ！", class:"submit-link"  %>
                 <% end %>
               </div>
             </div>
@@ -39,17 +43,18 @@
                 <%= f.label :background, "なぜなぜの説明" %><br>
               </div>
               <div class="result-exp">
-                <%= f.text_area :background, value: "ここに説明が入ります" %>
+                <%= f.text_area :background, value: "まだ未実装ですが、ここに画像の説明が入ります", class:"result-exp" %>
               </div>
             </div>
           </div>
           
 
-
-          <div class="hoge">
+        <div class="huga">
           <%= f.label :type_id, "なぜなぜの種類" %><br>
-          <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"hoge"}) %>
+          <div class="hoge">
+            <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"hoge"}) %>
           </div>
+        </div>
 
           <% end  %>
         </div>

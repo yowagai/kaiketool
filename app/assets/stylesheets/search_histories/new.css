@@ -45,6 +45,7 @@ a{color:inherit;text-decoration:none}
 .result-htm1{
   position:relative;
   background-color: rgb(246, 246, 246);
+  border-radius:25px;
   width: 400px;
   height: 420px;
   padding: 10px 15px 10px 15px;
@@ -62,28 +63,46 @@ a{color:inherit;text-decoration:none}
   justify-content: space-between;
 }
 
-/* .result-img{
-  width: 380px;
-  height: 350px;
-} */
-
-/* .result-form .button{
-  width:100%;
-  color:#696969;
-  display:block;
-  border:none;
-  padding:15px 20px;
-  border-radius:25px;
-  background:rgba(200,100,100,.1);
-  background:#F0FFFF;
+.right-title{
+  display: flex;
+  flex-direction: column;
 }
 
-.result-form .input{
-  width:100%;
-  color:#696969;
-  display:block;
-  border:none;
-  padding:15px 20px;
-  border-radius:25px;
-  background:rgba(27, 9, 165, 0.1);
-} */
+.htm1-title{
+  font-size: 20px;
+}
+
+.submit-link {
+  background-color: #FF8047;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  width: 80px;
+  border-radius: 15px;
+  color: #FBEDEB;
+  box-shadow: 0 5px #dfd9d9;
+  cursor: pointer;
+  font-family: "Nico Moji";
+}
+
+.submit-link:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+
+.submit-link:hover:not(:disabled) {
+  background: #636363;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.submit-link:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+.result-exp{
+  width: 350px;
+  padding-left: 10px;
+}
