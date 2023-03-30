@@ -49,15 +49,17 @@ a{color:inherit;text-decoration:none}
   width: 850px;
   height: 450px;
   box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius:25px;
   padding: 10px 15px 10px 15px;
   margin: 10px 15px 15px 15px;
 }
 
 .his-con{
-  display:block;
-  align-items: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .his-top{
@@ -71,13 +73,11 @@ a{color:inherit;text-decoration:none}
 .his-son {
   font-size: 50px;
   line-height: 50px;
-  color: brown;
 }
 
 .his-birthday {
   font-size: 50px;
   line-height: 50px;
-  color: rgb(211, 12, 12);
 }
 
 .his-down{
@@ -85,14 +85,20 @@ a{color:inherit;text-decoration:none}
   justify-content: space-between;
 }
 
+.his-left{
+  margin-right: 20px;
+}
 .his-right{
-
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .title-con{
   width: 400px;
   height: 50px;
-  background-color: aqua;
+  outline:1px solid #FFC0CB;
 }
 
 .his-title-ex{
@@ -107,8 +113,7 @@ font-size: 25px;
 }
 
 .exp-con{
-  height: 200px;
-  background-color: aquamarine;
+  height: 180px;
 
 }
 
@@ -117,12 +122,18 @@ font-size: 25px;
 }
 
 .his-exp{
+  display: flex;
+  justify-content: flex-start;
   font-size: 20px;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .his-right-down{
-  height: 50px;
-  background-color: aqua;
+  height: 55px;
+  outline:1px solid #FFC0CB;
+  padding-bottom: 10px;
+
 }
 
 .his-back-ex{
@@ -131,9 +142,16 @@ font-size: 25px;
 
 .his-back{
   font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
+.under-image{
+  padding-top: 10px;
+}
 
+.under-btn:hover{
+  opacity: 0.6;
+}
 /* .history-form .button{
   width:100%;
   color:#696969;

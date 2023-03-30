@@ -7,7 +7,7 @@
       <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
       <div class="history-form">
         <% @search_histories.each do |history| %>
-        <div class="history-htm1">
+        <div class="history-htm1" id="content">
           <div class="his-con">
             <div class="his-top">
               <div class="his-son">
@@ -21,7 +21,7 @@
               <div class="his-birthday">
                 <%= history.age %>
               </div>
-                さい&emsp;&emsp;のなぜなぜ
+                さい&emsp;のなぜなぜ
             </div>
 
             <div class="his-down">
@@ -42,7 +42,7 @@
                   キーワードのせつめい
                   </div>
                   <div class="his-exp">
-                  「スマートフォンは、ポータブルな電子デバイスで、携帯電話やインターネットに接続して、音声通話やメッセージの送受信、写真やビデオの撮影、ウェブサイトの閲覧など、様々な機能を提供するものです。スマートフォンは、高度なモバイル技術を活用しており、多くの人々にとって、生活に欠かせないものとなっています。」
+                  キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入りま
                   </div>
                 </div>
                 <div class="his-right-down">
@@ -51,7 +51,15 @@
                       <%# <%= history.type.name %>
                   </div>
                   <div class="his-back">
+                    ここには、親が子供の心情やその時のなぜなぜの状況などを記入します&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                     <%= history.background %><br>
+                  </div>
+                  <div class="under-image">
+                    <%= image_tag "coment.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "rituit.png", size: '35x35', class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "heart.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "up.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "kyouyu.png", size: '35x35',class:"under-btn" %>&emsp;
                   </div>
                 </div>
               </div>
