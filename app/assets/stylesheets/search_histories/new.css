@@ -107,3 +107,19 @@ a{color:inherit;text-decoration:none}
   width: 350px;
   padding-left: 10px;
 }
+
+.by--u{
+  transform-origin: center bottom;
+    animation: byu_anime 7s linear infinite;
+  width: 70px;
+  height: 70px;
+  position:absolute;
+  left: 47.5%;
+  top: 25%;
+}
+
+@keyframes byu_anime {
+  0% { transform:translateY(0) }
+  50% { transform:translateY(700px) }
+  100% { transform:translateY(0) }
+}

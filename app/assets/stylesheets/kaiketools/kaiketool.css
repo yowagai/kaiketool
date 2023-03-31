@@ -89,6 +89,20 @@ section:nth-child(2n){
   font-family: "Nico Moji";
 }
 
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cintent-up{
+  font-size: 50px;
+}
+
+.content-down{
+  font-size: 19px;
+}
+
 .link{
   font-size: 35px;
 }

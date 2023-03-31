@@ -6,6 +6,7 @@
       <% unless user_signed_in? %>
         <%= link_to "とうろくすればほぞんできるよ", new_user_registration_path , class:"btn-link" %>
       <% end %>
+      <%= image_tag "555.png", class:"by--u" %>
       </div>
       <div class="result-form">
         <% @image_urls.each do |url|  %>
@@ -47,7 +48,6 @@
               </div>
             </div>
           </div>
-          
 
         <div class="huga">
           <%= f.label :type_id, "なぜなぜの種類" %><br>

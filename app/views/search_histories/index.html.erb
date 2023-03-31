@@ -2,8 +2,9 @@
   <div class="history-wrap">
     <div class="history-html">
       <div class="history-title">
-      みんなのなぜ結果
+      みんなのなぜなぜ
       </div>
+      <%= image_tag '333.png' , size: '90x90' ,class: "rocket-icon" %>
       <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
       <div class="history-form">
         <% @search_histories.each do |history| %>

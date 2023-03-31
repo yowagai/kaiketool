@@ -11,7 +11,7 @@ a{color:inherit;text-decoration:none}
 .history-main{
   margin:5px;
   width:100%;
-  height: 100%;
+  height: 2500px;
   background-image: url('/assets/showback.jpg');
   font-family: "Nico Moji";
 }
@@ -172,3 +172,19 @@ font-size: 25px;
   border-radius:25px;
   background:rgba(27, 9, 165, 0.1);
 } */
+
+.rocket-icon{
+  transform-origin: center bottom;
+  animation: rocket_anime 5s linear infinite;
+}
+
+@keyframes rocket_anime {
+  0% { transform:translateY(0) }
+  5% { transform:translateY(0) }
+  10% { transform:translateY(0) }
+  20% { transform:translateY(-50px) }
+  25% { transform:translateY(0) }
+  30% { transform:translateY(-20px) }
+  50% { transform:translateY(0) }
+  100% { transform:translateY(0) }
+}
