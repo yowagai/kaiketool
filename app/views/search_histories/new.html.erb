@@ -2,11 +2,7 @@
   <div class="result-wrap">
     <div class="result-html">
       <div class="result-title">
-      いちばん近い画像をほぞんしよう<br>
-      <% unless user_signed_in? %>
-        <%= link_to "とうろくすればほぞんできるよ", new_user_registration_path , class:"btn-link" %>
-      <% end %>
-      <%= image_tag "555.png", class:"by--u" %>
+      いちばん近い画像をほぞんしよう
       </div>
       <div class="result-form">
         <% @image_urls.each do |url|  %>
@@ -14,47 +10,43 @@
           <%= form_with model: @search_history, url: search_histories_path, method: :post, local: true do |f|%>
           <div class="htm1-con">
             <div class="htm1-up">
-              <div class="right-title">
-                <div class="htm1-right">
-                  <%= f.label :title, "なぜなぜキーワード" %><br>
-                  <%= f.hidden_field :title, value: @title %>
-                  <!-- valueオプションを使って、@titleをフォームに表示する -->
-                </div>
-                <div class="htm1-title">
-                  <%= @title %>
-                </div>
+              <div class="htm1-right">1
+                <%= f.label :title, "なぜなぜキーワード" %><br>
+                <%= f.hidden_field :title, value: @title %>
+                <!-- valueオプションを使って、@titleをフォームに表示する -->
+                <%= @title %>
               </div>
-              <div class="htm1-left">
+              <div class="htm1-left">2
                 <% if user_signed_in? %>
-                  <%= f.submit "これだ！", class:"submit-link"  %>
+                  <%= f.submit "これだ！", class: :form__btn  %>
                 <% end %>
               </div>
             </div>
 
             <div class="htm1-down">
-              <div class="img-tit">
+              <div class="img-tit">3
                 <%= f.label :image, "なぜなぜ画像" %><br>
                 <%= f.hidden_field :image, value: url %>
                 <!-- hidden_fieldを使って、@image_urlsの情報をformに送信する -->
               </div>
-              <div class="result-img">
+              <div class="result-img">4
                 <%= image_tag url, size: '350x200' %>
               </div>
-              <div class="exp-tit">
+              <div class="exp-tit">5
                 <%= f.label :background, "なぜなぜの説明" %><br>
               </div>
-              <div class="result-exp">
-                <%= f.text_area :background, value: "まだ未実装ですが、ここに画像の説明が入ります", class:"result-exp" %>
+              <div class="result-exp">6
+                <%= f.text_area :background, value: "ここに説明が入ります" %>
               </div>
             </div>
           </div>
+          
 
-        <div class="huga">
-          <%= f.label :type_id, "なぜなぜの種類" %><br>
+
           <div class="hoge">
-            <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"hoge"}) %>
+          <%= f.label :type_id, "なぜなぜの種類" %><br>
+          <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"hoge"}) %>
           </div>
-        </div>
 
           <% end  %>
         </div>
@@ -63,7 +55,3 @@
     </div>
   </div>
 </div>
-<%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>もどる</span>
-    <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-<% end %>

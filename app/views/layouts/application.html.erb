@@ -9,10 +9,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -38,7 +34,7 @@
       <li><%= link_to 'プロフィール', root_path, class: "" %></li>  
       <li><%= link_to 'トップページ', root_path, class: "" %></li>  
       <li><%= link_to 'けんさく', speech_to_text_index_path, class: "" %></li>  
-      <li><%= link_to 'みんなのなぜなぜ', search_histories_path, class: "" %></li>  
+      <li><%= link_to 'みんなのなぜ', search_histories_path, class: "" %></li>  
     </ul>
   </nav>
   <% else %>
@@ -48,7 +44,7 @@
       <li><%= link_to 'とうろく', new_user_registration_path, class: "sign-up" %></li>
       <li><%= link_to 'トップページ', root_path, class: "" %></li>  
       <li><%= link_to 'けんさく', speech_to_text_index_path, class: "" %></li>  
-      <li><%= link_to 'みんなのなぜなぜ', search_histories_path, class: "" %></li>  
+      <li><%= link_to 'みんなのなぜ', search_histories_path, class: "" %></li>  
     </ul>
   </nav>
   <% end %>

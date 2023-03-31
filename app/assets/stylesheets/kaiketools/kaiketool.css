@@ -69,8 +69,7 @@ main{
 }
 
 section{
-  margin-right: 60px;
-  padding:50px 20px 50px 0;
+  padding:50px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,20 +86,6 @@ section:nth-child(2n){
   width: 1200px;
   align-items: center;
   font-family: "Nico Moji";
-}
-
-.content{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.cintent-up{
-  font-size: 50px;
-}
-
-.content-down{
-  font-size: 19px;
 }
 
 .link{
@@ -136,8 +121,8 @@ small{
   background-image: url('/assets/utyujin.png') no-repeat center center / 60px auto;
   display: inline-block;
   transition: 1.5s ease-in-out;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   margin-top: 15px;
 }
 

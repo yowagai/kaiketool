@@ -11,19 +11,21 @@ a{color:inherit;text-decoration:none}
 .history-main{
   margin:5px;
   width:100%;
-  height: 2500px;
+  height: 100%;
   background-image: url('/assets/showback.jpg');
   font-family: "Nico Moji";
 }
 
 .history-wrap{
-  width:1000px;
+  width:100%;
   height: 1800px;
   margin:auto;
+  max-width:1200px;
+  min-height:1000px;
   position:relative;
-  /* box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19); */
+  background: #FAF0E6;
+  box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
-
 .history-html{
   width:100%;
   position:absolute;
@@ -34,6 +36,7 @@ a{color:inherit;text-decoration:none}
 .history-title{
   font-size: 55px;
   line-height: 80px;
+  padding-bottom: 10px;
 }
 .history-form{
   height: 100%;
@@ -46,113 +49,12 @@ a{color:inherit;text-decoration:none}
 }
 
 .history-htm1{
-  width: 850px;
-  height: 450px;
+  width: 700px;
+  height: 300px;
   box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-  background: rgb(255, 255, 255);
-  border-radius:25px;
-  padding: 10px 15px 10px 15px;
-  margin: 10px 15px 15px 15px;
 }
 
-.his-con{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.his-top{
-  display: flex;
-  justify-content: flex-start;
-  font-size: 30px;
-  align-items: flex-end;
-  padding-bottom: 10px;
-}
-
-.his-son {
-  font-size: 50px;
-  line-height: 50px;
-}
-
-.his-birthday {
-  font-size: 50px;
-  line-height: 50px;
-}
-
-.his-down{
-  display: flex;
-  justify-content: space-between;
-}
-
-.his-left{
-  margin-right: 20px;
-}
-.his-right{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.title-con{
-  width: 400px;
-  height: 50px;
-  outline:1px solid #FFC0CB;
-}
-
-.his-title-ex{
-font-size: 15px;
-display: flex;
-
-
-}
-
-.his-tit{
-font-size: 25px;
-}
-
-.exp-con{
-  height: 180px;
-
-}
-
-.his-exp-ex{
-  display: flex;
-}
-
-.his-exp{
-  display: flex;
-  justify-content: flex-start;
-  font-size: 20px;
-  padding: 10px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.his-right-down{
-  height: 55px;
-  outline:1px solid #FFC0CB;
-  padding-bottom: 10px;
-
-}
-
-.his-back-ex{
-  display: flex;
-}
-
-.his-back{
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.under-image{
-  padding-top: 10px;
-}
-
-.under-btn:hover{
-  opacity: 0.6;
-}
-/* .history-form .button{
+.history-form .button{
   width:100%;
   color:#696969;
   display:block;
@@ -171,20 +73,4 @@ font-size: 25px;
   padding:15px 20px;
   border-radius:25px;
   background:rgba(27, 9, 165, 0.1);
-} */
-
-.rocket-icon{
-  transform-origin: center bottom;
-  animation: rocket_anime 5s linear infinite;
-}
-
-@keyframes rocket_anime {
-  0% { transform:translateY(0) }
-  5% { transform:translateY(0) }
-  10% { transform:translateY(0) }
-  20% { transform:translateY(-50px) }
-  25% { transform:translateY(0) }
-  30% { transform:translateY(-20px) }
-  50% { transform:translateY(0) }
-  100% { transform:translateY(0) }
 }

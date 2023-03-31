@@ -70,5 +70,4 @@ class SearchHistoriesController < ApplicationController
     end
     render "search_histories/new"
   end
-
 end

@@ -7,7 +7,7 @@ class SpeechToTextController < ApplicationController
     require "google/cloud/speech"
     speech = Google::Cloud::Speech.speech
 
-    storage_path = "gs://kaiketool/airpline.flac"
+    storage_path = "gs://kaiketool/test.flac"
 
     config = { encoding:          :FLAC,    #FLAC、LINEAR16が対応
               sample_rate_hertz: 44_100,   #サンプリングレート
