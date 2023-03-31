@@ -17,7 +17,7 @@ a{color:inherit;text-decoration:none}
   max-width:525px;
   min-height:1300px;
   position:relative;
-  background: #FAF0E6;
+  background: #ffffff;
   box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 .login-html{
@@ -58,8 +58,8 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
-  color:#fff;
-  border-color:#1161ee;
+  color:#696969;
+  border-color:#FF8047;
 }
 .login-form{
   min-height:345px;
@@ -74,7 +74,7 @@ a{color:inherit;text-decoration:none}
 .login-form .group .input,
 .login-form .group .button{
   width:100%;
-  color:#696969;
+  color:#938989c7;
   display:block;
 }
 .login-form .group .input,
@@ -85,12 +85,16 @@ a{color:inherit;text-decoration:none}
   background:rgba(200,100,100,.1);
 }
 
+.login-form .group .input:focus{
+  outline: solid 1px #FF8047;
+}
+
 .login-form .group .label{
   color:#333333;
   font-size:15px;
 }
 .login-form .group .button{
-  background:#F0FFFF;
+  background:#FFBFBE;
 }
 .login-form .group label .icon{
   width:15px;
@@ -124,7 +128,7 @@ a{color:inherit;text-decoration:none}
   color:#fff;
 }
 .login-form .group .check:checked + label .icon{
-  background:#1161ee;
+  background:#FF8047;
 }
 .login-form .group .check:checked + label .icon:before{
   transform:scale(1) rotate(45deg);
@@ -148,10 +152,23 @@ a{color:inherit;text-decoration:none}
   text-align:center;
 }
 
+.year-select,
+.month-select,
+.day-select,
+.birth-date-select,
 .sel-inp {
   position: relative;
+margin-bottom: 10px;
 }
 
+.year-select::after,
+.month-select::after,
+.day-select::after,
+.year-select::before,
+.month-select::before,
+.day-select::before,
+.birth-date-select::before,
+.birth-date-select::after,
 .sel-inp::before,
 .sel-inp::after {
   position: absolute;
@@ -159,16 +176,24 @@ a{color:inherit;text-decoration:none}
   pointer-events: none;
 }
 
+.year-select::before,
+.month-select::before,
+.day-select::before,
+.birth-date-select::before,
 .sel-inp::before {
   right: 0;
   display: inline-block;
   width: 2.8em;
   height: 2.8em;
   border-radius: 0 25px 25px 0;
-  background-color: #d4de3f;
+  background-color: #FFBFBE;
   content: '';
 }
 
+.year-select::after,
+.month-select::after,
+.day-select::after,
+.birth-date-select::after,
 .sel-inp::after {
   position: absolute;
   top: 50%;
@@ -181,6 +206,10 @@ a{color:inherit;text-decoration:none}
   content: '';
 }
 
+.year-select select,
+.month-select select,
+.day-select select,
+.birth-date-select select,
 .sel-inp select {
   appearance: none;
   -webkit-appearance: none;
@@ -196,6 +225,20 @@ a{color:inherit;text-decoration:none}
   background:rgba(200,100,100,.1);
 }
 
+.year-select select:focus,
+.month-select select:focus,
+.day-select select:focus,
+.birth-date-select select:focus,
 .sel-inp select:focus {
-  outline: 1px solid #1161ee;
+  outline: 1px solid #FF8047;
 }
+
+// .group-birth {
+//   margin-bottom: 20px;
+// }
+
+// .birth-date-select {
+//   margin-top: 10px;
+//   width: 200px;
+//   font-size: 16px;
+// }

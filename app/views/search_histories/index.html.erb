@@ -2,30 +2,80 @@
   <div class="history-wrap">
     <div class="history-html">
       <div class="history-title">
-      みんなのなぜ結果
+      みんなのなぜなぜ
       </div>
+      <%= image_tag '333.png' , size: '90x90' ,class: "rocket-icon" %>
       <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
       <div class="history-form">
         <% @search_histories.each do |history| %>
-        <div class="history-htm1">
-          <div class="">
-          <h3 class='item-name'>
-          <%= history.title %>
-          </h3>
-          <div class='item-img-content'>
-          <%= image_tag (history.image), class: "item-img" %>
+        <div class="history-htm1" id="content">
+          <div class="his-con">
+            <div class="his-top">
+              <div class="his-son">
+                <%= history.user.child_name %>
+              </div>
+              <% if history.user.sex_id == 2 %>
+                くん<p>&emsp;</p>
+              <% else %>
+                ちゃん<p>&emsp;</p>
+              <% end %>
+              <div class="his-birthday">
+                <%= history.age %>
+              </div>
+                さい&emsp;のなぜなぜ
+            </div>
+
+            <div class="his-down">
+              <div class="his-left">
+                <%= image_tag (history.image), size: '400x350' %>
+              </div>
+              <div class="his-rigth">
+                <div class="title-con">
+                  <div class="his-title-ex">
+                    けんさくキーワード
+                  </div>
+                  <div class="his-tit">
+                    <%= history.title %>
+                  </div>
+                </div>
+                <div class="exp-con">
+                  <div class="his-exp-ex">
+                  キーワードのせつめい
+                  </div>
+                  <div class="his-exp">
+                  キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入りま
+                  </div>
+                </div>
+                <div class="his-right-down">
+                  <div class="his-back-ex">
+                    なぜ？となったきっかけ
+                      <%# <%= history.type.name %>
+                  </div>
+                  <div class="his-back">
+                    ここには、親が子供の心情やその時のなぜなぜの状況などを記入します&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <%= history.background %><br>
+                  </div>
+                  <div class="under-image">
+                    <%= image_tag "coment.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "rituit.png", size: '35x35', class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "heart.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "up.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                    <%= image_tag "kyouyu.png", size: '35x35',class:"under-btn" %>&emsp;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <%# <div class=''> %>
-          <%# <span><%= history.background %><br> %>
-                <%# <%= history.type.name %></span> %>
-        <%# </div> %>
-      </div>
         <% end %>
-        <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+      </div>
+      <%= will_paginate @search_histories, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
     </div>
   </div>
 </div>
 <%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>検索に戻る</span>
-    <%= image_tag 'search.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+    <span class='purchase-btn-text'>もどる</span>
+    <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
+          <div class="">
+          </div>

@@ -10,7 +10,7 @@
 <body>
   <div class="kaiketu">
     <div class="kaiketu-btn">
-        <%= button_to "かいけつしてみる？", speech_to_text_index_path, method: :get, class: "btn-link" %>
+        <%= button_to "かいけつする？", speech_to_text_index_path, method: :get, class: "btn-link" %>
     </div>
     <ul class="slider">
     <li class="slider-item slider-item01"></li>
@@ -22,16 +22,21 @@
     <section>
     <!--/area1-->
       <div class="contents">
-        <div>
-          <h2>こどものなぜなぜを解決しましょう</h2>
-          <br/>
-          <ul>こんなことはありませんか？
-            <li>自分がわからないことを聞かれる</li>
-            <li>なぜなぜで困ったことがある</li>
-          </ul>
+        <div class="content">
+          <div class="content-up">
+            <h2>なせなせ期とは・・・</h2>
+            <br/>
+          </div>
+          <div class="content-down">
+            <h4>
+              子供たちは、成長の過程で「なぜなぜ期」と呼ばれる時期があります。<br/>
+              この時期になると、子供たちは世界の中で起こることに対して疑問を持ち<br/>
+              何度も「なぜ？」と質問を繰り返します。
+            </h4>
+          </div>
         </div>
         <div>
-          <%= image_tag "nayami.png" %>
+          <%= image_tag "1.png" , size: '400x288' %>
         </div>
       </div>
     </section>
@@ -39,15 +44,21 @@
     <!--/area2-->
       <div class="contents">
         <div>
-          <%= image_tag "kaiwa.png" %>
+          <%= image_tag "2.png", size: '287x300' %>
         </div>
-        <div>
-          <h2>こどものなぜなぜを解決しましょう</h2>
-          <br/>
-          <ul>こんなことはありませんか？
-            <li>自分がわからないことを聞かれる</li>
-            <li>なぜなぜで困ったことがある</li>
-          </ul>
+        <div class="content">
+          <div class="content-up">
+            <h2>こどものなぜなぜを解決しましょう</h2>
+            <br/>
+          </div>
+          <div class="content-down">
+            <h4>
+              この「かいけつ〜る」を使って<br/>
+              子供たちの好奇心を刺激し、新しい知識を獲得しよう。<br/>
+              この時期に積極的に質問に答えること子供たちは<br/>
+              コミュニケーション能力や思考力を発展させ自信をつけることができます。
+            </h4>
+          </div>
         </div>
       </div>
     </section>
@@ -55,16 +66,22 @@
     <!--/area3-->
       <div>
         <div class="contents">
-        <div>
-          <h2>こどものなぜなぜを解決しましょう</h2>
-          <br/>
-          <ul>こんなことはありませんか？
-            <li>自分がわからないことを聞かれる</li>
-            <li>なぜなぜで困ったことがある</li>
-          </ul>
-        </div>
-        <div>
-          <%= image_tag "mamatokaiwa.png" %>
+          <div class="content">
+            <div class="content-up">
+              <h2>解決したなぜなぜをみんなでシェアしよう</h2>
+              <br/>
+            </div>
+            <div class="content-down">
+              <h4>
+              みんなの投稿を見ることで子供と一緒に新しい発見や<br/>
+              同じなぜなぜを共感できます。<br/>
+              ぜひシェアしてあなたの友人やフォロワーさんと意見交換しましょう！
+              </h4>
+            </div>
+          </div>
+          <div>
+          <%= image_tag "5.png", size: '332x350' %>
+          </div>
         </div>
       </div>
     </section>
