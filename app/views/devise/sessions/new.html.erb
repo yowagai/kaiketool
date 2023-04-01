@@ -72,17 +72,10 @@
           </div> 
           <div class="group">
             <%= f.label :お子さんの誕生日, class:"label" %><br />
-            <%= f.date_select(
-                  :birthday,
-                  class:'select-birth',
-                  id:"birth-date",
-                  use_month_numbers: true,
-                  prompt:'---',
-                  start_year: 2005,
-                  end_year: (Time.now.year),
-                  date_separator: '%s')%>
-                <%# "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>"  %>
           </div>
+            <div class="birth-date-select">
+              <%= birth_date_select(f, :birthday) %>
+            </div>
           <div class="group">
             <%= f.submit "とうろく" , class:"button"%>
           </div>
