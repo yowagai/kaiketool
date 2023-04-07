@@ -21,7 +21,7 @@ class SearchHistoriesController < ApplicationController
   end
 
   def show
-
+    @search_history = SearchHistory.find(params[:id])
   end
 
   def search
