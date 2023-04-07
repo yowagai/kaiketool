@@ -2,7 +2,7 @@ class SearchHistory < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :type
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   def age
     now = Time.zone.now

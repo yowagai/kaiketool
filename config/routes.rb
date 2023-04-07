@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    resources :comments, only: [:create, :index]
   end
   resources :speech_to_text, only: :index do
     collection do
