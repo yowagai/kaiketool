@@ -23,4 +23,5 @@ class User < ApplicationRecord
   validates :birthday, presence: true
 
   has_many :search_histories
+  has_many :comments
 end
