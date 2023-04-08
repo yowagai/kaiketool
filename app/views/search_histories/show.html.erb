@@ -1,32 +1,77 @@
-<body>
-  <div class="hoge">
-    <div class="hoge-btn">
-        <%= button_to "かいけつしてみる？", speech_to_text_index_path, method: :get, class: "btn-link" %>
-    </div>
-    <ul class="slider">
-    <li class="slider-item slider-item01"></li>
-    <li class="slider-item slider-item02"></li>
-    <li class="slider-item slider-item03"></li>
-    </ul>
-  </div>
-  
-  <main>
-    <section>
-    <!--/area1-->
-      <div class="contents">
-        <div>
-          <h2>こどものなぜなぜを解決しましょう</h2>
-          <br/>
-          <ul>こんなことはありませんか？
-            <li>自分がわからないことを聞かれる</li>
-            <li>なぜなぜで困ったことがある</li>
-          </ul>
-        </div>
-        <div>
-          <%= image_tag "nayami.png" %>
+<div class="history-main">
+  <div class="history-wrap">
+    <div class="history-html">
+      <div class="history-title">
+
+      </div>
+      <%= image_tag '333.png' , size: '90x90' ,class: "rocket-icon" %>
+      <div class="history-form">
+        <div class="history-htm1" id="content">
+          <div class="his-con">
+            <div class="his-top">
+              <div class="his-son">
+                <%= @search_history.user.child_name %>
+              </div>
+              <% if @search_history.user.sex_id == 2 %>
+                くん<p>&emsp;</p>
+              <% else %>
+                ちゃん<p>&emsp;</p>
+              <% end %>
+              <div class="his-birthday">
+                <%= @search_history.age %>
+              </div>
+                さい&emsp;のなぜなぜ
+            </div>
+
+            <div class="his-down">
+              <div class="his-left">
+                <%= image_tag (@search_history.image), size: '400x350' %>
+              </div>
+              <div class="his-rigth">
+                <div class="title-con">
+                  <div class="his-title-ex">
+                    けんさくキーワード
+                  </div>
+                  <div class="his-tit">
+                    <%= @search_history.title %>
+                  </div>
+                </div>
+                <div class="exp-con">
+                  <div class="his-exp-ex">
+                  キーワードのせつめい
+                  </div>
+                  <div class="his-exp">
+                  キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入ります。キーワードの説明が入りま
+                  </div>
+                </div>
+                <div class="his-right-down">
+                  <div class="his-back-ex">
+                    なぜ？となったきっかけ
+                      <%# <%= history.type.name %>
+                  </div>
+                  <div class="his-back">
+                    ここには、親が子供の心情やその時のなぜなぜの状況などを記入します&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <%= @search_history.background %><br>
+                  </div>
+                  <div class="under-image">
+                    <%= link_to search_history_path(@search_history.id) do %>
+                      <%= image_tag "coment.png", size: '35x35',class:"under-btn"%>&emsp;&emsp;
+                    <% end %>
+                      <%= image_tag "rituit.png", size: '35x35', class:"under-btn" %>&emsp;&emsp;
+                      <%= image_tag "heart.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                      <%= image_tag "up.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                      <%= image_tag "kyouyu.png", size: '35x35',class:"under-btn" %>&emsp;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
-</body>
-
+    </div>
+  </div>
+</div>
+<%= link_to(search_histories_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>もどる</span>
+    <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
