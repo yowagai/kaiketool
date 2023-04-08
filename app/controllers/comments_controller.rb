@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
       @search_history = @comment.search_history
       @comments = @search_history.comments
       render "search_histories/show"
+    end
   end
 
   private
