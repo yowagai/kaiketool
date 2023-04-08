@@ -56,11 +56,13 @@
                     <%= history.background %><br>
                   </div>
                   <div class="under-image">
-                    <%= image_tag "coment.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
-                    <%= image_tag "rituit.png", size: '35x35', class:"under-btn" %>&emsp;&emsp;
-                    <%= image_tag "heart.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
-                    <%= image_tag "up.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
-                    <%= image_tag "kyouyu.png", size: '35x35',class:"under-btn" %>&emsp;
+                    <%= link_to search_history_path(history.id) do %>
+                      <%= image_tag "coment.png", size: '35x35',class:"under-btn"%>&emsp;&emsp;
+                    <% end %>
+                      <%= image_tag "rituit.png", size: '35x35', class:"under-btn" %>&emsp;&emsp;
+                      <%= image_tag "heart.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                      <%= image_tag "up.png", size: '35x35',class:"under-btn" %>&emsp;&emsp;
+                      <%= image_tag "kyouyu.png", size: '35x35',class:"under-btn" %>&emsp;
                   </div>
                 </div>
               </div>
@@ -77,5 +79,3 @@
     <span class='purchase-btn-text'>もどる</span>
     <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
-          <div class="">
-          </div>
