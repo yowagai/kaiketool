@@ -22,6 +22,8 @@ class SearchHistoriesController < ApplicationController
 
   def show
     @search_history = SearchHistory.find(params[:id])
+    @comment = Comment.new
+    @comments = @search_history.comments.includes(:user)
   end
 
   def search
