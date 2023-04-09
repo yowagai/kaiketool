@@ -69,6 +69,31 @@
         </div>
       </div>
       <div class="history-comment">
+        <div class="__comments">
+          <% if user_signed_in? %>
+            <%= form_with model: [@search_history, @comment],local: true do |f| %>
+              <div class="field">
+                <%= f.label :content, "コメント" %><br />
+                <%= f.text_field :content, id:"comment_content" %>
+              </div>
+              <div class="actions">
+                <%= f.submit "送信する", class: :form__btn  %>
+              </div>
+            <% end %>
+          <% end %>
+          <ul class="comments_lists">
+              <li class="comments_list">
+              <% @comments.each do |comment| %>
+                <%= comment.content %>
+                <%= comment.user.parent_name +
+                                        "("  +
+                    comment.user.child_name  +
+                                      "の親)" %>
+                <%# <%= link_to comment.user.parent_name, user_path(comment.user.id), class: :comment_user %>
+              <% end %>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
