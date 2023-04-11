@@ -33,15 +33,15 @@ https://kaiketool.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/40cefefee6bcad937ba44f9255bc4ca3.gif)](https://gyazo.com/40cefefee6bcad937ba44f9255bc4ca3)  
   
 ## 音声をgoogle cloud speechで読み取り、テキスト化します  
-[![Image from Gyazo](https://i.gyazo.com/c55788fc6f811df5ed99c2b1ba66bbeb.gif)](https://gyazo.com/c55788fc6f811df5ed99c2b1ba66bbeb)  
+[![Image from Gyazo](https://i.gyazo.com/04acac713f91f6e17ea1cb95a1b65095.gif)](https://gyazo.com/04acac713f91f6e17ea1cb95a1b65095)  
   
 現在、本番環境にて音声のテキスト化がうまくいっていません。
   
 ## 検索した言葉を画像で何パターンか表示します  
-[![Image from Gyazo](https://i.gyazo.com/ba3a2a15d913897e67e54995c440a3e0.gif)](https://gyazo.com/ba3a2a15d913897e67e54995c440a3e0)  
+[![Image from Gyazo](https://i.gyazo.com/e7e459b9d61d6445189bdce3f0e2be3a.gif)](https://gyazo.com/e7e459b9d61d6445189bdce3f0e2be3a)  
   
 ## 調べた言葉をみんなでシェアできます  
-[![Image from Gyazo](https://i.gyazo.com/e7973d4e53eeb0568b7de6f30a510fec.png)](https://gyazo.com/e7973d4e53eeb0568b7de6f30a510fec)  
+[![Image from Gyazo](https://i.gyazo.com/8b77e2a9ccb9db7ec7c9a551de84d180.png)](https://gyazo.com/8b77e2a9ccb9db7ec7c9a551de84d180))  
   
   
   
