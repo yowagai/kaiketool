@@ -13,7 +13,7 @@ a{color:inherit;text-decoration:none}
   width:100%;
   height: 800px;
   position:relative;
-  background-image: url('/assets/background.png');
+  background-image: url(asset_path('background.png'));
   font-family: "Nico Moji";
 }
 
