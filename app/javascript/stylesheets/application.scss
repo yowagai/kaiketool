@@ -9,17 +9,17 @@ height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（1
 }
 /*　背景画像設定　*/
 
-.slider-item01 {
-  background-image: url(asset_path('utyu.jpg'));
-}
+// .slider-item01 {
+//   background-image: url("<%= asset_path('utyu.jpg') %>");
+// }
 
-.slider-item02 {
-  background-image: url(asset_path('utyu3.jpg'));
-}
+// .slider-item02 {
+//   background-image: url("<%= asset_path('utyu3.jpg') %>");
+// }
 
-.slider-item03 {
-  background-image: url(asset_path('utyu2.jpg'));
-}
+// .slider-item03 {
+//   background-image: url("<%= asset_path('utyu2.jpg') %>");
+// }
 
 .slider-item {
   width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
