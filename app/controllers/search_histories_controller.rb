@@ -20,6 +20,14 @@ class SearchHistoriesController < ApplicationController
     end
   end
 
+  def edit
+    @search_history = SearchHistory.find(params[:id])
+  end
+
+  def update
+
+  end
+
   def show
     @search_history = SearchHistory.find(params[:id])
     @comment = Comment.new
