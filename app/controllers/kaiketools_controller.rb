@@ -1,5 +1,7 @@
 class KaiketoolsController < ApplicationController
   def index
+    @search_history = SearchHistory.first
+    @search_histories = SearchHistory.all
   end
 
   # def search

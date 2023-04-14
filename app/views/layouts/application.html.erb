@@ -35,7 +35,7 @@
   <nav id="g-nav">
     <ul>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>  
-      <%# <li><%= link_to 'プロフィール', edit_search_history_path(@search_history.id), class: "" %></li>   %>
+      <li><%= link_to 'プロフィール', edit_search_history_path(@search_history.id), class: "" %></li>  
       <li><%= link_to 'トップページ', root_path, class: "" %></li>  
       <li><%= link_to 'けんさく', speech_to_text_index_path, class: "" %></li>  
       <li><%= link_to 'みんなのなぜなぜ', search_histories_path, class: "" %></li>  
