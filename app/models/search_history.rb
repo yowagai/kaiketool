@@ -3,6 +3,7 @@ class SearchHistory < ApplicationRecord
   belongs_to :type
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :kaiketools
 
   def age
     now = Time.zone.now
