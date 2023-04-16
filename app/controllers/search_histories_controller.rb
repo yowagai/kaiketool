@@ -3,6 +3,8 @@ require 'googleauth'
 require 'googleauth/stores/file_token_store'
 
 class SearchHistoriesController < ApplicationController
+  before_action :set_user
+
   def index
     @search_histories = SearchHistory.includes(:user).order('created_at DESC').paginate(page: params[:page], per_page: 4)
   end
@@ -79,6 +81,14 @@ class SearchHistoriesController < ApplicationController
       @image_urls = []
     end
     render "search_histories/new"
+  end
+
+  def set_user
+    if user_signed_in?
+      @search_history_user = SearchHistory.find_by(user_id: current_user.id)
+    else
+      @search_history_user = nil
+    end
   end
 
 end

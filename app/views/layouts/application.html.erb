@@ -25,6 +25,15 @@
   <%= link_to(root_path, class:"toplogo") do %>
       <%= image_tag 'kaiketu2.png' , size: '185x50', class:"toplogo" %>
   <% end %>
+  <% if user_signed_in? %>
+  こんにちは
+  <%= @search_history_user.user.child_name %>
+    <% if @search_history_user.user.sex_id == 2 %>
+      くん<p>&emsp;</p>
+    <% else %>
+      ちゃん<p>&emsp;</p>
+    <% end %>
+  <% end %>
 </header>
   <body>
     <div class="openbtn1">
@@ -35,7 +44,7 @@
   <nav id="g-nav">
     <ul>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>  
-      <li><%= link_to 'プロフィール', edit_search_history_path(@search_history.id), class: "" %></li>  
+      <li><%= link_to 'プロフィール', edit_search_history_path(@search_history_user.id), class: "" %></li>  
       <li><%= link_to 'トップページ', root_path, class: "" %></li>  
       <li><%= link_to 'けんさく', speech_to_text_index_path, class: "" %></li>  
       <li><%= link_to 'みんなのなぜなぜ', search_histories_path, class: "" %></li>  
