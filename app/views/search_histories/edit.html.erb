@@ -1,3 +1,58 @@
+<div class="history-main">
+  <div class="history-wrap">
+    <div class="history-html">
+      <div class="history-title">
+      プロフィール
+      </div>
+      <div class="history-form">
+        <div class="history-htm1-prof" id="content">
+          <div class="profile">
+            <div class="child-info">
+              <div class="form-group">
+                <label for="child-name">子供の名前</label>
+                <p class="data" id="child-name">
+                <%= @search_history.user.child_name %></p>
+              </div>
+              <div class="form-group">
+                <label for="child-reading">子供のふりがな</label>
+                <p class="data" id="child-reading">
+                <%= @search_history.user.child_name_kana %></p>
+              </div>
+              <div class="form-group">
+                <label for="child-birthday">誕生日</label>
+                <p class="data" id="child-birthday">
+                <%= @search_history.user.birthday %></p>
+              </div>
+              <div class="form-group">
+                <label for="child-gender">性別</label>
+                <p class="data" id="child-gender">
+                <%= @search_history.user.sex_id %></p>
+              </div>
+            </div>
+            <div class="parent-info">
+              <div class="form-group">
+                <label for="parent-name">お母さん、お父さんの名前</label>
+                <p class="data" id="parent-name">
+                <%= @search_history.user.parent_name %></p>
+              </div>
+              <div class="form-group">
+                <label for="parent-reading">お母さん、お父さんのふりがな</label>
+                <p class="data" id="parent-reading">
+                <%= @search_history.user.parent_name_kana %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to(speech_to_text_index_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>もどる</span>
+    <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
+
+
 <%= @search_history.user.child_name %>
 <%= @search_history.user.child_name_kana %>
 <%= @search_history.title %>

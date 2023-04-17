@@ -25,6 +25,7 @@
   <%= link_to(root_path, class:"toplogo") do %>
       <%= image_tag 'kaiketu2.png' , size: '185x50', class:"toplogo" %>
   <% end %>
+<div class="toplogo_name">
   <% if user_signed_in? %>
   こんにちは
   <%= @search_history_user.user.child_name %>
@@ -34,6 +35,7 @@
       ちゃん<p>&emsp;</p>
     <% end %>
   <% end %>
+</div>
 </header>
   <body>
     <div class="openbtn1">

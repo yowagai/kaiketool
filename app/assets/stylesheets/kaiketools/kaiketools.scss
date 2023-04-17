@@ -67,6 +67,23 @@ opacity: 0;
   }
 }
 
+.toplogo_name{
+  animation-name: fadeBokashiAnime;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes fadeBokashiAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /*========= ぼかしのためのCSS ===============*/
 
 .mainblur{
