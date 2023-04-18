@@ -43,6 +43,21 @@
             </div>
           </div>
         </div>
+        <div class="history-htm1-prof" id="content">
+          <div class="profile">
+            <div class="child-info">
+              <div class="form-group">
+                <label for="child-name">検索履歴</label>
+                <% @search_histories.each do |history| %>
+                  <p class="data_history" id="child-name">
+                  <%= history.title %>
+                  <%= image_tag (history.image), size: '400x350' %>
+                  </p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

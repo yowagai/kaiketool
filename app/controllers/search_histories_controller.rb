@@ -24,6 +24,7 @@ class SearchHistoriesController < ApplicationController
 
   def edit
     @search_history = SearchHistory.find(params[:id])
+    @search_histories = SearchHistory.where(user_id: current_user.id)
   end
 
   def update
