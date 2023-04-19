@@ -28,7 +28,11 @@ class SearchHistoriesController < ApplicationController
   end
 
   def update
-
+    if @search_history.update(search_history_params)
+      redirect_to edit_search_history_path(@search_history.id)
+    else
+      render :edit
+    end
   end
 
   def show
