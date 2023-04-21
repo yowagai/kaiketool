@@ -42,7 +42,8 @@ class SearchHistoriesController < ApplicationController
   end
 
   def destroy
-    
+    @search_history = SearchHistory.find(params[:id])
+    @search_history.destroy
   end
 
   def search
