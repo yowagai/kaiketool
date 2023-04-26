@@ -103,12 +103,12 @@ h2 {
 }
 .edit-html .sign-in,
 .edit-html .sign-up,
-.login-form .group .check{
+.login-form-edit .group .check{
   display:none;
 }
 .edit-html .tab,
-.login-form .group .label,
-.login-form .group .button{
+.login-form-edit .group .label,
+.login-form-edit .group .button{
   text-transform:uppercase;
 }
 .edit-html .tab{
@@ -124,42 +124,42 @@ h2 {
   color:#696969;
   border-color:#FF8047;
 }
-.login-form{
+.login-form-edit{
   min-height:345px;
   position:relative;
   perspective:1000px;
   transform-style:preserve-3d;
 }
-.login-form .group{
+.login-form-edit .group{
   margin-bottom:15px;
 }
-.login-form .group .label,
-.login-form .group .input,
-.login-form .group .button{
+.login-form-edit .group .label,
+.login-form-edit .group .input,
+.login-form-edit .group .button{
   width:100%;
   color:#938989c7;
   display:block;
 }
-.login-form .group .input,
-.login-form .group .button{
+.login-form-edit .group .input,
+.login-form-edit .group .button{
   border:none;
   padding:15px 20px;
   border-radius:25px;
   background:rgba(200,100,100,.1);
 }
 
-.login-form .group .input:focus{
+.login-form-edit .group .input:focus{
   outline: solid 1px #FF8047;
 }
 
-.login-form .group .label{
+.login-form-edit .group .label{
   color:#333333;
   font-size:15px;
 }
-.login-form .group .button{
+.login-form-edit .group .button{
   background:#FFBFBE;
 }
-.login-form .group label .icon{
+.login-form-edit .group label .icon{
 width:15px;
 height:15px;
   border-radius:2px;
@@ -167,8 +167,8 @@ height:15px;
   display:inline-block;
   background:rgba(255,255,255,.1);
 }
-.login-form .group label .icon:before,
-.login-form .group label .icon:after{
+.login-form-edit .group label .icon:before,
+.login-form-edit .group label .icon:after{
   content:'';
   width:10px;
   height:2px;
@@ -176,33 +176,33 @@ height:15px;
   position:absolute;
   transition:all .2s ease-in-out 0s;
 }
-.login-form .group label .icon:before{
+.login-form-edit .group label .icon:before{
   left:3px;
   width:5px;
   bottom:6px;
   transform:scale(0) rotate(0);
 }
-.login-form .group label .icon:after{
+.login-form-edit .group label .icon:after{
   top:6px;
   right:0;
   transform:scale(0) rotate(0);
 }
-.login-form .group .check:checked + label{
+.login-form-edit .group .check:checked + label{
   color:#fff;
 }
-.login-form .group .check:checked + label .icon{
+.login-form-edit .group .check:checked + label .icon{
   background:#FF8047;
 }
-.login-form .group .check:checked + label .icon:before{
+.login-form-edit .group .check:checked + label .icon:before{
   transform:scale(1) rotate(45deg);
 }
-.login-form .group .check:checked + label .icon:after{
+.login-form-edit .group .check:checked + label .icon:after{
   transform:scale(1) rotate(-45deg);
 }
-.edit-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+.edit-html .sign-in:checked + .tab + .sign-up + .tab + .login-form-edit .sign-in-htm{
   transform:rotate(0);
 }
-.edit-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+.edit-html .sign-up:checked + .tab + .login-form-edit .sign-up-htm{
   transform:rotate(0);
 }
 
