@@ -58,7 +58,7 @@ h2 {
 }
 
 // *,:after,:before{box-sizing:border-box}
-// .clearfix:after,.clearfix:before{content:'';display:table}
+// .clearfix:after,.clearfix:before{content:'';display:tabble}
 // .clearfix:after{clear:both;display:block}
 // a{color:inherit;text-decoration:none}
 
@@ -90,8 +90,8 @@ h2 {
   border-radius:25px;
 }
 
-.edit-html .sign-in-htm,
-.edit-html .sign-up-htm{
+.edit-html .edit-now-htm,
+.edit-html .edit-edit-htm{
   top:0;
   left:0;
   right:0;
@@ -106,12 +106,12 @@ h2 {
 .login-form-edit .group .check{
   display:none;
 }
-.edit-html .tab,
+.edit-html .tabb,
 .login-form-edit .group .label,
 .login-form-edit .group .button{
   text-transform:uppercase;
 }
-.edit-html .tab{
+.edit-html .tabb{
   font-size:22px;
   margin-right:15px;
   padding-bottom:5px;
@@ -119,8 +119,8 @@ h2 {
   display:inline-block;
   border-bottom:2px solid transparent;
 }
-.edit-html .now:checked + .tab,
-.edit-html .edit:checked + .tab{
+.edit-html .now:checked + .tabb,
+.edit-html .edit:checked + .tabb{
   color:#696969;
   border-color:#FF8047;
 }
@@ -199,10 +199,10 @@ height:15px;
 .login-form-edit .group .check:checked + label .icon:after{
   transform:scale(1) rotate(-45deg);
 }
-.edit-html .now:checked + .tab + .edit + .tab + .login-form-edit .sign-in-htm{
+.edit-html .now:checked + .tabb + .edit + .tabb + .login-form-edit .edit-now-htm{
   transform:rotate(0);
 }
-.edit-html .edit:checked + .tab + .login-form-edit .sign-up-htm{
+.edit-html .edit:checked + .tabb + .login-form-edit .edit-edit-htm{
   transform:rotate(0);
 }
 
