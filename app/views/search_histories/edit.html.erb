@@ -6,17 +6,17 @@
       <input id="tab-2" type="radio" name="tab" class="edit"><label for="tab-2" class="tabb">編集</label>
       <div class="login-form-edit">
         <div class="edit-now-htm">
-            <%# <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
               <div class="group">
                 <label class="label" >子供の名前</label>
-                <%# <p class="dataa" id="child-name"> %>
+                <p class="dataa" id="child-name">
                 <%= @search_history.user.child_name %>
-                <%# </p> %>
+                </p>
               </div>
               <div class="group">
-                <%# <%= f.submit "ログイン", class:"button" %>
+                <%= f.submit "ログイン", class:"button" %>
               </div>
-            <%# <% end %>
+            <% end %>
         </div>
         <div class="edit-edit-htm">
         <%# <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
@@ -41,8 +41,6 @@
       <div class="history-title">
       プロフィール
       </div>
-      <input id="tab-1" type="radio" name="tab" class="now" checked><label for="tab-1" class="tab">現在</label>
-      <input id="tab-2" type="radio" name="tab" class="edit"><label for="tab-2" class="tab">編集</label>
       <div class="history-form">
         <div class="history-htm1-prof" id="content">
           <div class="profile">
