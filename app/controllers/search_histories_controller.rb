@@ -41,6 +41,11 @@ class SearchHistoriesController < ApplicationController
     @comments = @search_history.comments.includes(:user)
   end
 
+  def destroy
+    @search_history = SearchHistory.find(params[:id])
+    @search_history.destroy
+  end
+
   def search
     google_custom_search
   end
