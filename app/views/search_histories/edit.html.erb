@@ -2,165 +2,92 @@
   プロフィール
   <div class="edit-wrap">
     <div class="edit-html">
-      <input id="tab-1" type="radio" name="tab" class="now" checked><label for="tab-1" class="tabb">現在</label>
-      <input id="tab-2" type="radio" name="tab" class="edit"><label for="tab-2" class="tabb">編集</label>
+      <input id="tab-1" type="radio" name="tab" class="now" checked><label for="tab-1" class="tabb">いま</label>
+      <input id="tab-2" type="radio" name="tab" class="edit"><label for="tab-2" class="tabb">へんしゅう</label>
       <div class="login-form-edit">
         <div class="edit-now-htm">
           <div class="group">
-            <label class="label" >子供の名前</label>
-            <p class="dataa" id="child-name">
+            <label class="label" >お子さんのなまえ</label>
+            <p class="input" id="child-name">
             <%= @search_history.user.child_name %>
             </p>
           </div>
           <div class="group">
             <label class="label" >子供のふりがな</label>
-            <p class="dataa" id="child-reading">
+            <p class="input" id="child-reading">
             <%= @search_history.user.child_name_kana %></p>
           </div>
           <div class="group">
             <label class="label" >誕生日</label>
-            <p class="dataa" id="child-birthday">
+            <p class="input" id="child-birthday">
             <%= @search_history.user.birthday %></p>
           </div>
           <div class="group">
             <label class="label" >性別</label>
-            <p class="dataa" id="child-gender">
+            <p class="input" id="child-gender">
             <%= @search_history.user.sex_id %></p>
           </div>
           <div class="group">
             <label class="label" >お母さん、お父さんの名前</label>
-            <p class="dataa" id="parent-name">
+            <p class="input" id="parent-name">
             <%= @search_history.user.parent_name %></p>
           </div>
           <div class="group">
             <label class="label" >お母さん、お父さんのふりがな</label>
-            <p class="dataa" id="parent-reading">
+            <p class="input" id="parent-reading">
             <%= @search_history.user.parent_name_kana %></p>
           </div>
         </div>
         <div class="edit-edit-htm">
         <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
           <div class="group">
-            <%= f.label :アドレス ,class:"label" %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
+            <%= f.label :お子さんのなまえ, class:"label" %><br />
+            <%= f.text_field :child_name, value: @search_history.user.child_name, autofocus: true, autocomplete: "", class:"input" %>
           </div>
           <div class="group">
-            <%= f.submit "とうろく" , class:"button"%>
+            <%= f.label :子供のふりがな,class:"label"  %><br />
+            <%= f.text_field :child_name_kana, value: @search_history.user.child_name_kana, autofocus: true, autocomplete: "", class:"input" %>
+          </div>
+          <div class="group">
+            <%= f.label :性別, class:"label" %><br />
+            <div class="sel-inp">
+              <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"sel-inp"}) %>
+            </div>
+          </div> 
+          <div class="group">
+            <%= f.label :お父さん・お母さんのなまえ, class:"label" %><br />
+            <%= f.text_field :parent_name, value: @search_history.user.parent_name, autofocus: true, autocomplete: "", class:"input" %>
+          </div>
+          <div class="group">
+            <%= f.label :フリガナ（半角カナ）, class:"label" %><br />
+            <%= f.text_field :parent_name_kana, value: @search_history.user.parent_name_kana, autofocus: true, autocomplete: "", class:"input" %>
+          </div>
+          <div class="group">
+            <%= f.submit "へんしゅう" , class:"button"%>
           </div>
         <% end %>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="history-main">
-  <div class="history-wrap">
-    <div class="history-html">
-      <div class="history-title">
-      プロフィール
-      </div>
-      <div class="history-form">
-        <div class="history-htm1-prof" id="content">
-          <div class="profile">
-            <div class="child-info">
-              <div class="form-edit">
-                <button name="button">編集</button>
-              </div>
-              <div class="group">
-                <label for="child-name">子供の名前</label>
-                <p class="dataa" id="child-name">
-                <%= @search_history.user.child_name %></p>
-              </div>
-              <div class="group">
-                <label for="child-reading">子供のふりがな</label>
-                <p class="dataa" id="child-reading">
-                <%= @search_history.user.child_name_kana %></p>
-              </div>
-              <div class="group">
-                <label for="child-birthday">誕生日</label>
-                <p class="dataa" id="child-birthday">
-                <%= @search_history.user.birthday %></p>
-              </div>
-              <div class="group">
-                <label for="child-gender">性別</label>
-                <p class="dataa" id="child-gender">
-                <%= @search_history.user.sex_id %></p>
-              </div>
-            </div>
-            <div class="parent-info">
-              <div class="group">
-                <label for="parent-name">お母さん、お父さんの名前</label>
-                <p class="dataa" id="parent-name">
-                <%= @search_history.user.parent_name %></p>
-              </div>
-              <div class="group">
-                <label for="parent-reading">お母さん、お父さんのふりがな</label>
-                <p class="dataa" id="parent-reading">
-                <%= @search_history.user.parent_name_kana %></p>
-              </div>
-            </div>
-          </div>
-          <div class="profile-edit">
-            <div class="child-info">
-              <div class="form-edit">
-                <button name="button">編集</button>
-              </div>
-              <div class="group">
-                <label for="child-name">子供の名前</label>
-                <p class="dataa" id="child-name">
-                <%= @search_history.user.child_name %></p>
-              </div>
-              <div class="group">
-                <label for="child-reading">子供のふりがな</label>
-                <p class="dataa" id="child-reading">
-                <%= @search_history.user.child_name_kana %></p>
-              </div>
-              <div class="group">
-                <label for="child-birthday">誕生日</label>
-                <p class="dataa" id="child-birthday">
-                <%= @search_history.user.birthday %></p>
-              </div>
-              <div class="group">
-                <label for="child-gender">性別</label>
-                <p class="dataa" id="child-gender">
-                <%= @search_history.user.sex_id %></p>
-              </div>
-            </div>
-            <div class="parent-info">
-              <div class="group">
-                <label for="parent-name">お母さん、お父さんの名前</label>
-                <p class="dataa" id="parent-name">
-                <%= @search_history.user.parent_name %></p>
-              </div>
-              <div class="group">
-                <label for="parent-reading">お母さん、お父さんのふりがな</label>
-                <p class="dataa" id="parent-reading">
-                <%= @search_history.user.parent_name_kana %></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="history-htm1-prof" id="content">
-          <div class="profile-history">
-            <div class="child-info">
-              <div class="group">
-                <label for="child-name">検索履歴</label>
-                <% @search_histories.each do |history| %>
-                  <p class="dataa_history" id="child-name">
-                  <%= history.title %>
-                  <%= image_tag (history.image), size: '400x350' %>
-                  </p>
-                <% end %>
-              </div>
-            </div>
-          </div>
+  検索履歴
+  <div class="history-htm1-prof" id="content">
+    <div class="profile-history">
+      <div class="child-info">
+        <div class="group">
+          <label for="child-name"></label>
+          <% @search_histories.each do |history| %>
+            <p class="input_history" id="child-name">
+            <%= history.title %>
+            <%= image_tag (history.image), size: '400x350' %>
+            </p>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <%= link_to(root_path, class: 'purchase-btn') do %>
     <span class='purchase-btn-text'>もどる</span>
     <%= image_tag 'ufo.png' , size: '185x50' ,class: "purchase-btn-icon" %>
